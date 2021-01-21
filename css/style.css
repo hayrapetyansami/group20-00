@@ -1,0 +1,50 @@
+/* class-ը տալիս ենք այն էլեմենտներին, որոնք պետք է ունենան նույն սթայլերը */
+/* ID տալիս ենք միայն ունիկալ էլեմենտներին */
+/* ԵՐԲԵՔ ԵՐԲԵՔ ԵՐԲԵՔ ՄԵՆՔ ՉՊԵՏՔ Ա ՕԳՏԱԳՈՐԾԵՔ ԳԼՈԲԱԼ ՍԵԼԵՔԹՐՆԵՐ ինչպես նաև !important */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* padding = ներսից լիցք */
+/* margin = դրսից լիցք */
+
+body {
+    height: 4000px;
+}
+
+.wrapper {
+    background-size: cover;
+    background-repeat:no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    height: 200px;
+
+    padding: 35px;
+    color: #fff;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.wrapper h3 {
+    font-size: 25px;
+    font-family: arial;
+    letter-spacing: 5px;
+    word-spacing: 5px;
+    font-weight: normal;
+    font-style: italic;
+    margin-bottom: 20px;
+    word-break: keep-all;
+}
+
+.wrapper p {
+    font-size: 18px;
+    font-family: cursive;
+    letter-spacing: 3px;
+    word-spacing: 3px;
+    line-height: 30px;
+    text-indent: 35px;
+    text-transform: capitalize;
+}
