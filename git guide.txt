@@ -1,0 +1,28 @@
+Registration
+
+1. https://github.com/
+2. sign up
+3. username (ex. poghos1)
+4. email (gmail)
+5. password 8 > 1 number, 1 uppercase, 1 spec symbol #
+
+GitHub setup global
+
+1.  git config --global user.name "poghos1"
+2. git config --global user.email "poghos1@gmail.com"
+3. password
+
+GitHub in work
+
+1.  git init
+2. git status
+3. git add -A
+4. git commit -m "dzer comment@"
+
+5. git push 
+
+ETE NOR REPOSITORY EQ BACUM PETQ A ANEQ NERQEVI 3 QAYL@
+
+5.1. git remote add origin https://github.com/git-2000/myTestProject.git
+5.2 git branch -M main
+5.3 git push -u origin main

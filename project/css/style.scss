@@ -1,0 +1,158 @@
+// reset browser default styles
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    list-style-position: inside;
+}
+
+// global styles start
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0px 10px;
+}
+
+$darkBG : #303F9F;
+$lightBG : #3F51B5;
+$gray: #757575;
+$lightBlue: #448AFF;
+$primary: #C5CAE9;
+$divider : #BDBDBD;
+$white : #fff;
+$black : #333;
+
+p {
+    line-height: 25px;
+}
+
+// global styles end
+
+// fonts start
+@font-face {
+    font-family: noto-sans-bold;
+    src: url('../fonts/NotoSansArmenian-Bold.ttf');
+}
+@font-face {
+    font-family: noto-sans-regular;
+    src: url('../fonts/NotoSansArmenian-Regular.ttf');
+}
+@font-face {
+    font-family: noto-sans-medium;
+    src: url('../fonts/NotoSansArmenian-Medium.ttf');
+}
+@font-face {
+    font-family: noto-sans-light;
+    src: url('../fonts/NotoSansArmenian-Light.ttf');
+}
+@font-face {
+    font-family: noto-sans-thin;
+    src: url('../fonts/NotoSansArmenian-Thin.ttf');
+}
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+// fonts end
+
+// body 
+
+body {
+    color: $black;
+    font-size: 16px;
+    font-family: noto-sans-regular, 'Roboto', sans-serif;
+    height: 4000px; // jamanakavor
+}
+
+
+// nav start
+nav {
+    background: $darkBG;
+    position: fixed;
+    width: 100%;
+    z-index: 99999;
+
+    .nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .logo {
+            color: $white;
+        }
+
+        #mobile_menu_btn {
+            display: none;
+            cursor: pointer;
+            svg {
+                width: 30px;
+                fill: $white;
+            }
+        }
+
+        #nav_menu {
+            li {
+                display: inline-block;
+                list-style-type: none;
+
+                a {
+                    display: flex;
+                    min-height: 80px;
+                    align-items: center;
+                    color: $white;
+                    text-decoration: none;
+                    padding: 0px 15px;
+
+                    &:hover {
+                        background: $lightBG;
+                    }
+
+                    @media screen and (max-width: 1024px) {
+                        padding: 0px 8px;
+                    }
+                }
+            }
+        }
+
+        // this media for mobile responsive menu
+        @media screen and (max-width: 768px) {
+            position: relative;
+            min-height: 80px;
+
+            .logo {
+                order: 2;
+            }
+            #mobile_menu_btn {
+                order: 1;
+                display: block;
+            }
+
+            #nav_menu {
+                position: absolute;
+                top: 80px;
+                left: 0;
+                width: 100%;
+                max-width: 320px;
+                background: $lightBG;
+                transform: translateX(-500px);
+                transition: all 0.5s;
+                
+                &.menu_active {
+                    transform: translateX(0px);
+                    transition: all 0.5s;
+                }
+
+                li {
+                    display: block;
+
+                    a {
+                        min-height: 50px;
+
+                        &:hover {
+                            background: rgba(255, 255, 255, 0.1);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// nav end

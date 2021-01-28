@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css?family=Shadows+Into+Light+Two');
+@import url('https://fonts.googleapis.com/css?family=Raleway:300');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.gallery{
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.gallery_items{
+    display: flex;
+    flex-flow: column;
+    flex-basis: 25%;
+    justify-content: center;
+    align-items: center;
+    transition: .5s;
+    height: 400px;
+    position: relative;
+}
+
+.gallery_items:nth-child(1){
+    background: url('img/1.jpg') no-repeat center center;
+    background-size: cover;
+}
+.gallery_items:nth-child(2){
+    background: url('img/2.jpg') no-repeat center center;
+    background-size: cover;
+}
+.gallery_items:nth-child(3){
+    background: url('img/3.jpg') no-repeat center center;
+    background-size: cover;
+}
+.gallery_items:nth-child(4){
+    background: url('img/4.jpeg') no-repeat center center;
+    background-size: cover;
+}
+
+.gallery_items span{
+    font-size: 35px;
+    font-family: 'Shadows Into Light Two', cursive;
+    color: #fff;
+    text-shadow: 1px 2px #000;
+    font-weight: 600;
+}
+
+.galleryItems_text{
+    font-family: 'Raleway', sans-serif;
+    padding: 20px 10px;
+	margin: 20px 0;
+    background: rgba(0, 0, 0, 0.377);
+    color: #fff;
+    opacity: 0;
+    font-size: 22px;
+    text-align: center;
+    font-weight: 500;
+    position: absolute;
+    bottom: 10px;
+}
+.gallery_items:hover{
+    flex-basis: 80%;
+}
+.gallery_items:hover .galleryItems_text{
+    opacity: 1;
+    transition: opacity .5s;
+}
+
+@media screen and (max-width: 768px){
+    .gallery{
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .gallery_items{
+        width: 100%;
+        flex-basis: 50px;
+    }
+
+    .gallery_items:hover{
+        transition: 0.5s;
+        flex-basis: 400px;
+    }
+
+    .gallery_items:hover .galleryItems_text{
+        bottom: 40px;
+        font-size: 18px;
+    }
+}
