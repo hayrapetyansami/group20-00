@@ -411,42 +411,6 @@ main {
                 }
             }
         }
-        .offer_items{
-            display: flex;
-            flex-flow: row wrap;
-            justify-content: space-between;
-
-            .offer_item {
-                flex-basis: 32.5%;
-                background: $lightBG;
-                color: $white;
-                padding: 20px;
-                border-radius: 40px 0px;
-                position: relative;
-
-                h3 {
-                    margin-bottom: 10px;
-                }
-                button {
-                    margin-top: 20px;
-                    padding: 10px 20px;
-                    cursor: pointer;
-                    background: transparent;
-                    border: 2px solid $white;
-                    color: $white;
-                    transition: all .5s;
-
-                    &:hover {
-                        background:rgba(255, 255, 255, .5);
-                    }
-                }
-
-                @media screen and (max-width: 768px) {
-                    flex-basis: 100%;
-                    margin-bottom: 20px;
-                }
-            }
-        }
     }
 }
 // masin style end
