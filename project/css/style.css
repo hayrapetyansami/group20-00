@@ -61,6 +61,36 @@ p {
   background: #448AFF;
 }
 
+@media screen and (max-width: 768px) {
+  .title {
+    font-size: 24px;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .title {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .title {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .title {
+    font-size: 17px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .title {
+    font-size: 16px;
+  }
+}
+
 .sub_title {
   color: #5d5d5d;
   padding-bottom: 10px;
@@ -238,6 +268,7 @@ header .header form input, header .header form .member_count, header .header for
   margin-bottom: 15px;
   color: #5d5d5d;
   min-height: 50px;
+  cursor: pointer;
 }
 
 header .header form input::-webkit-input-placeholder, header .header form .member_count::-webkit-input-placeholder, header .header form select::-webkit-input-placeholder {
@@ -277,45 +308,6 @@ header .header form input[type="submit"], header .header form .member_count[type
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
   }
-}
-
-header .header form .member_count {
-  position: relative;
-  cursor: pointer;
-}
-
-header .header form .member_count .member_count_options {
-  display: none;
-  position: absolute;
-  top: 48px;
-  left: 0px;
-  right: 0;
-  background: #fff;
-  width: 100%;
-  padding: 5px;
-  border-top: 2px solid #BDBDBD;
-}
-
-header .header form .member_count .member_count_options.member_count_active {
-  display: block;
-}
-
-header .header form .member_count .member_count_options .mco_item {
-  margin: 8px 0px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-header .header form .member_count .member_count_options .mco_item .mco_counter button {
-  padding: 5px 10px;
-  background: #C5CAE9;
-  color: #fff;
-  border: none;
-  cursor: pointer;
 }
 
 main .main .services .services_items {
@@ -511,6 +503,153 @@ main .main .offers .offer_items .offer_item button:hover {
   }
 }
 
+main .main .reviews .owl-carousel .reviews_item {
+  margin-top: 15px;
+  color: #5d5d5d;
+}
+
+main .main .reviews .owl-carousel .reviews_item .user_img {
+  text-align: center;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+main .main .reviews .owl-carousel .reviews_item .user_img img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+main .main .reviews .owl-carousel .reviews_item .user_img svg {
+  width: 100%;
+  height: 100%;
+  fill: #448AFF;
+}
+
+main .main .reviews .owl-carousel .reviews_item h3 {
+  margin: 10px 0;
+  text-align: center;
+}
+
+main .main .reviews .owl-carousel .reviews_item p {
+  font-size: 14px;
+}
+
+main .main .reviews .owl-carousel .reviews_item p a {
+  font-size: 14px;
+  color: #448AFF;
+}
+
+@media screen and (max-width: 768px) {
+  main .main .reviews .owl-carousel .reviews_item p {
+    text-align: center;
+  }
+}
+
+main .main .reviews .owl-carousel .owl-dots {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main .main .reviews .owl-carousel .owl-dots .owl-dot {
+  width: 9px;
+  height: 9px;
+  border: 1px solid #303F9F;
+  border-radius: 50%;
+  margin: 20px 5px;
+}
+
+main .main .reviews .owl-carousel .owl-dots .owl-dot.active {
+  border: 1px solid #3F51B5;
+  background: #3F51B5;
+}
+
+main .main .reviews .owl-carousel .owl-nav {
+  position: relative;
+}
+
+main .main .reviews .owl-carousel .owl-nav button {
+  font-size: 45px;
+  color: #3F51B5;
+  position: absolute;
+  top: -180px;
+}
+
+main .main .reviews .owl-carousel .owl-nav button.owl-prev {
+  left: 0;
+}
+
+main .main .reviews .owl-carousel .owl-nav button.owl-next {
+  right: 0;
+}
+
+main .main .contact .contact_items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main .main .contact .contact_items .contact_item-info {
+  -ms-flex-preferred-size: 28%;
+      flex-basis: 28%;
+}
+
+main .main .contact .contact_items .contact_item-info .contact-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 10px;
+  font-family: noto-sans-medium, 'Roboto';
+  color: #5d5d5d;
+}
+
+main .main .contact .contact_items .contact_item-info .contact-info a {
+  color: #5d5d5d;
+}
+
+main .main .contact .contact_items .contact_item-info .contact-info svg {
+  width: 30px;
+  height: 30px;
+  fill: #448AFF;
+  margin-right: 15px;
+}
+
+main .main .contact .contact_items .contact_item-map {
+  -ms-flex-preferred-size: 70%;
+      flex-basis: 70%;
+}
+
+main .main .contact .contact_items .contact_item-map iframe {
+  width: 100%;
+}
+
+@media screen and (max-width: 1024px) {
+  main .main .contact .contact_items .contact_item-info, main .main .contact .contact_items .contact_item-map {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    margin-bottom: 20px;
+  }
+}
+
 main .main .services_more .service_more_item img {
   display: block;
   max-width: 400px;
@@ -598,7 +737,7 @@ main .main .services_more .service_more_photos .service_more_photos_wrap img {
   z-index: 99999;
 }
 
-.modal form {
+.modal form, .modal .member_count_options {
   background: #fff;
   padding: 20px;
   margin: 0px 20px;
@@ -607,7 +746,7 @@ main .main .services_more .service_more_photos .service_more_photos_wrap img {
   position: relative;
 }
 
-.modal form [data-close] {
+.modal form [data-offer-close] {
   position: absolute;
   top: 11px;
   right: 0;
@@ -616,7 +755,7 @@ main .main .services_more .service_more_photos .service_more_photos_wrap img {
   cursor: pointer;
 }
 
-.modal form [data-close] svg {
+.modal form [data-offer-close] svg {
   width: 25px;
   height: 25px;
   fill: #e90101;
@@ -663,6 +802,43 @@ main .main .services_more .service_more_photos .service_more_photos_wrap img {
   background: #3F51B5;
   color: #fff;
   border-color: #3F51B5;
+  cursor: pointer;
+}
+
+.modal .member_count_options [data-count-close] {
+  position: absolute;
+  top: 11px;
+  right: 0;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+}
+
+.modal .member_count_options [data-count-close] svg {
+  width: 25px;
+  height: 25px;
+  fill: #e90101;
+}
+
+.modal .member_count_options h3 {
+  margin-top: 0px;
+}
+
+.modal .member_count_options .mco_wrap .mco_item {
+  margin: 8px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.modal .member_count_options .mco_wrap .mco_item .mco_counter button {
+  padding: 5px 10px;
+  background: #C5CAE9;
+  color: #fff;
+  border: none;
   cursor: pointer;
 }
 

@@ -72,6 +72,24 @@ p {
         width: 6px;
         background: $lightBlue;
     }
+
+    @media screen and (max-width: 768px ) {
+        font-size: 24px;
+    }
+
+    @media screen and (max-width: 580px ) {
+        font-size: 20px;
+    }
+    @media screen and (max-width: 520px ) {
+        font-size: 18px;
+    }
+    @media screen and (max-width: 480px ) {
+        font-size: 17px;
+    }
+    @media screen and (max-width: 420px ) {
+        font-size: 16px;
+    }
+    
 }
 
 .sub_title {
@@ -227,6 +245,7 @@ header {
                 margin-bottom: 15px;
                 color: $d5;
                 min-height: 50px;
+                cursor: pointer;
 
                 &::placeholder {
                     color: $d5;
@@ -247,44 +266,6 @@ header {
                 @media screen and (max-width: 580px) {
                     flex-basis: 100%;
                 }
-            }
-
-            .member_count {
-                position: relative;
-                cursor: pointer;
-
-                .member_count_options{
-                    display: none;
-                    position: absolute;
-                    top: 48px;
-                    left: 0px;
-                    right: 0;
-                    background: $white;
-                    width: 100%;
-                    padding: 5px;
-                    border-top: 2px solid $divider;
-
-                    &.member_count_active {
-                        display: block;
-                    }
-
-                    .mco_item {
-                        margin: 8px 0px;
-                        display: flex;
-                        justify-content: space-between;
-
-                        .mco_counter {
-                            button {
-                                padding: 5px 10px;
-                                background: $primary;
-                                color: $white;
-                                border: none;
-                                cursor: pointer;
-                            }
-                        }
-                    }
-                }
-                
             }
         }
     }
@@ -462,6 +443,134 @@ main {
                 }
             }
         }
+        .reviews {
+            .owl-carousel {
+                .reviews_item {
+                    margin-top: 15px;
+                    color: $d5;
+
+                    .user_img {
+                        text-align: center;
+                        border-radius: 50%;
+                        width: 150px;
+                        height: 150px;
+                        overflow: hidden;
+                        margin: 0 auto;
+
+                        img {
+                            display: block;
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                        }
+
+                        svg {
+                            width: 100%;
+                            height: 100%;
+                            fill: $lightBlue;
+                        }
+                    }
+
+                    h3 {
+                        margin: 10px 0;
+                        text-align: center;
+                    }
+
+                    p {
+                        font-size: 14px;
+
+                        a {
+                            font-size: 14px;
+                            color: $lightBlue;
+                        }
+
+                        @media screen and (max-width: 768px) {
+                            text-align: center;
+                        }
+                    }
+                }
+                .owl-dots {
+                    display: flex;
+                    justify-content: center;
+
+                    .owl-dot {
+                        width: 9px;
+                        height: 9px;
+                        border: 1px solid $darkBG;
+                        border-radius: 50%;
+                        margin: 20px 5px;
+                    }
+
+                    .owl-dot.active {
+                        border: 1px solid $lightBG;
+                        background: $lightBG;
+                    }
+                }
+
+                .owl-nav {
+                    position: relative;
+
+                    button {
+                        font-size: 45px;
+                        color: $lightBG;
+                        position: absolute;
+                        top: -180px;
+
+                        &.owl-prev {
+                            left: 0;
+                        }
+
+                        &.owl-next {
+                            right: 0;
+                        }
+                    }
+                }
+            }
+        }
+        .contact{
+            .contact_items {
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: space-between;
+
+                .contact_item-info {
+                    flex-basis: 28%;
+
+                    .contact-info {
+                        display: flex;
+                        align-items: center;
+                        margin-bottom: 10px;
+                        font-family: noto-sans-medium, 'Roboto';
+                        color: $d5;
+                        a {
+                            color: $d5;
+                        }
+
+                        svg {
+                            width: 30px;
+                            height: 30px;
+                            fill: $lightBlue;
+                            margin-right: 15px;
+                        }
+                    }
+                }
+
+                .contact_item-map {
+                    flex-basis: 70%;
+
+                    iframe {
+                        width: 100%;
+                    }
+                }
+
+                @media screen and (max-width: 1024px) {
+                    .contact_item-info, .contact_item-map {
+                        flex-basis: 100%;
+                        margin-bottom: 20px;
+                    }
+                }
+            }
+        }
 
         // child pages
         .services_more {
@@ -539,14 +648,16 @@ main {
     background: rgba(0, 0, 0, 0.8);
     z-index: 99999;
 
-    form {
+    form, .member_count_options {
         background: $white;
         padding: 20px;
         margin: 0px 20px;
         flex-basis: 500px;
         position: relative;
+    }
 
-        [data-close] {
+    form {
+        [data-offer-close] {
             position: absolute;
             top: 11px;
             right: 0;
@@ -590,6 +701,45 @@ main {
                 color: $white;
                 border-color: $lightBG;
                 cursor: pointer;
+            }
+        }
+    }
+
+    .member_count_options {
+        [data-count-close] {
+            position: absolute;
+            top: 11px;
+            right: 0;
+            width: 35px;
+            height: 35px;
+            cursor: pointer;
+
+            svg {
+                width: 25px;
+                height: 25px;
+                fill: rgb(233, 1, 1)
+            }
+        }
+
+        h3 {
+            margin-top: 0px;
+        }
+
+        .mco_wrap {
+            .mco_item {
+                margin: 8px 0px;
+                display: flex;
+                justify-content: space-between;
+
+                .mco_counter {
+                    button {
+                        padding: 5px 10px;
+                        background: $primary;
+                        color: $white;
+                        border: none;
+                        cursor: pointer;
+                    }
+                }
             }
         }
     }
