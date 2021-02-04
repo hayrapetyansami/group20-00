@@ -403,6 +403,16 @@ main {
                     }
                 }
             }
+
+            a{
+                color: $lightBlue;
+                display: block;
+                text-align: right;
+
+                &:hover {
+                    text-decoration: none;
+                }
+            }
         }
         .offers {
             .offer_items {

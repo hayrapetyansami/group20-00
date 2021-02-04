@@ -453,6 +453,16 @@ main .main .services .services_items .service_item:hover .service_items_text {
   }
 }
 
+main .main .services a {
+  color: #448AFF;
+  display: block;
+  text-align: right;
+}
+
+main .main .services a:hover {
+  text-decoration: none;
+}
+
 main .main .offers .offer_items {
   display: -webkit-box;
   display: -ms-flexbox;
