@@ -14,7 +14,9 @@
         <section class="nav container">
             <!-- navigation logo -->
             <div class="logo">
-                LOGO
+                <a href="index.html">
+                    <img src="img/logo.png" alt="logo">
+                </a>
             </div>
             <!-- navigation logo -->
 
@@ -75,16 +77,18 @@
 
             <!-- our site menu start -->
             <ul id="nav_menu">
-                <li><a href="#">Ծառայություններ</a></li>
-                <li><a href="#">Ներգնա տուրիզմ</a></li>
-                <li><a href="#">Արտագնա տուրիզմ</a></li>
-                <li><a href="#">Մեր Մասին</a></li>
-                <li><a href="#">Կապ</a></li>
+                <li><a href="services.html">Ծառայություններ</a></li>
+                <li><a href="about.html">Մեր Մասին</a></li>
+                <li><a href="contact.html">Կապ</a></li>
+                <form action="#" name="search" autocomplete="off" data-search>
+                    <input type="text" name="search_value" placeholder="Որոնում․․․">
+                </form>
             </ul>
             <!-- our site menu end -->
         </section>
     </nav>
     <!-- navigation block end -->
+
     <!-- header block start -->
     <header style="background-image: url(./img/headerBG.jpg);">
         <section class="header container">
@@ -95,40 +99,6 @@
                 <!-- member count block wrapper start -->
                 <div class="member_count">
                     <p>Անձերի քանակը</p>
-
-                    <!-- member count options start -->
-                    <div class="member_count_options">
-                        <!-- fot adulst 18+ -->
-                        <div class="aduls mco_item">
-                            Մեսահասակներ։ 
-                            <div class="mco_counter">
-                                <button data-minus>-</button>
-                                <span data-resault>0</span>
-                                <button data-plus>+</button>
-                            </div>
-                        </div>
-
-                        <!-- fot child 18- -->
-                        <div class="child mco_item">
-                            Երեխաներ։ 
-                            <div class="mco_counter">
-                                <button data-minus>-</button>
-                                <span data-resault>0</span>
-                                <button data-plus>+</button>
-                            </div>
-                        </div>
-
-                        <!-- fot rooms-->
-                        <div class="room_count mco_item">
-                            Սենյակի համար։ 
-                            <div class="mco_counter">
-                                <button data-minus>-</button>
-                                <span data-resault>0</span>
-                                <button data-plus>+</button>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- member count options end -->
                 </div>
                 <!-- member count block wrapper end -->
 
@@ -198,6 +168,50 @@
         </section>
     </main>
     <!-- main block end -->
+    <!-- footer block start -->
+    <footer>
+        <section class="footer container">
+            <div class="footer_top_item">
+                <img src="img/logo.png" alt="logo">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, magni.</p>
+            </div>
+            <div class="footer_top_item">
+                <p class="footer_top_item_title">Իմ Էջը</p>
+                <a href="#">Մուտք</a>
+                <a href="#">Գրանցում</a>
+                <br>
+                <a href="#">Օգնություն</a>
+            </div>
+            <div class="footer_top_item">
+                <p class="footer_top_item_title">Օգտակար Հղումներ</p>
+                <ul id="nav_menu">
+                    <li><a href="services.html">Ծառայություններ</a></li>
+                    <li><a href="about.html">Մեր Մասին</a></li>
+                    <li><a href="contact.html">Կապ</a></li>
+                </ul>
+            </div>
+            <div class="footer_top_item">
+                <p class="footer_top_item_title">Միացեք մեզ</p>
+                <ul>
+                    <li><a href="#">Մենք Facebook-ում</a></li>
+                    <li><a href="#">Մենք Instagram-ում</a></li>
+                    <li><a href="#">Մենք Twitter-ում</a></li>
+                    <li><a href="#">Մենք YouTube-ում</a></li>
+                </ul>
+            </div>
+        </section>
+        <div class="footer_bottom">
+            <div class="container">
+                <div class="web_info">
+                    Բոլոր Իրավունքները Պաշտպանված Են  &copy; 2021
+                </div>
+                <div class="created">
+                    Կայքը պատրաստել է <a href="https://www.facebook.com/HayrapetyanStyle" target="_blank">HayrapetyanStyle</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer block end -->
 
     <script src="./js/jquery-3.2.0.min.js"></script>
     <script src="./js/script.js"></script>

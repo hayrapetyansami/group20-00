@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="hy">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Booking By Us </title>
+    <link rel="stylesheet" href="./css/swiper.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <!-- navigation block start -->
+    <nav>
+        <section class="nav container">
+            <!-- navigation logo -->
+            <div class="logo">
+                <a href="index.html">
+                    <img src="img/logo.png" alt="logo">
+                </a>
+            </div>
+            <!-- navigation logo -->
+
+            <!-- when screen witdth < 768px -->
+            <div id="mobile_menu_btn">
+                <?xml version="1.0" encoding="iso-8859-1"?>
+                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                        viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                    <g>
+                        <g>
+                            <path d="M492,236H20c-11.046,0-20,8.954-20,20c0,11.046,8.954,20,20,20h472c11.046,0,20-8.954,20-20S503.046,236,492,236z"/>
+                        </g>
+                    </g>
+                    <g>
+                        <g>
+                            <path d="M492,76H20C8.954,76,0,84.954,0,96s8.954,20,20,20h472c11.046,0,20-8.954,20-20S503.046,76,492,76z"/>
+                        </g>
+                    </g>
+                    <g>
+                        <g>
+                            <path d="M492,396H20c-11.046,0-20,8.954-20,20c0,11.046,8.954,20,20,20h472c11.046,0,20-8.954,20-20
+                                C512,404.954,503.046,396,492,396z"/>
+                        </g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                </svg>
+            </div>
+            <!-- when screen witdth < 768px -->
+
+            <!-- our site menu start -->
+            <ul id="nav_menu">
+                <li><a href="services.html">Ծառայություններ</a></li>
+                <li><a href="about.html">Մեր Մասին</a></li>
+                <li><a href="contact.html">Կապ</a></li>
+                <form action="#" name="search" autocomplete="off" data-search>
+                    <input type="text" name="search_value" placeholder="Որոնում․․․">
+                </form>
+            </ul>
+            <!-- our site menu end -->
+        </section>
+    </nav>
+    <!-- navigation block end -->
+
+    <!-- header block start -->
+    <header style="background-image: url(./img/headerBG.jpg);">
+        <section class="header container">
+            <form action="#" name="filter">
+                <input type="text" placeholder="Ու՞ր եք ցանկանում գնալ">
+                <input type="text" placeholder="Մուտք և Ելք">
+
+                <!-- member count block wrapper start -->
+                <div class="member_count">
+                    <p>Անձերի քանակը</p>
+                </div>
+                <!-- member count block wrapper end -->
+
+                <select name="stars">
+                    <option value="#" readonly>Ընտրեք ըստ աստղերի</option>
+                    <option value="1">1 Աստղ</option>
+                    <option value="2">2 Աստղ</option>
+                    <option value="3">3 Աստղ</option>
+                    <option value="4">4 Աստղ</option>
+                    <option value="5">5 Աստղ</option>
+                </select>
+                <input type="submit" value="Որոնել">
+            </form>
+        </section>
+    </header>
+    <!-- header block end -->
+
+    <!-- main block start -->
+    <main>
+        <section class="main container">
+            <!-- services block start -->
+            <section class="services ms_style">
+                <h2 class="title">Ծառայություններ</h2>
+
+                <div class="services_items">
+                    <div class="service_item">
+                        <img src="./img/ingoing.jpg" alt="service_cover">
+                        <h3 class="service_category"> Ներգնա Տուրիզմ</h3>
+                        <div class="service_items_text">
+                            <h3>Ներգնա Տուրիզմ</h3>
+                            <p>Մենք առաջարկում ենք միասին շրջակայել Հայաստանի ներսով․․․</p>
+                            <a href="service.html">Տեսնել ավելին</a>
+                        </div>
+                    </div>
+                    <div class="service_item">
+                        <img src="./img/outgoing.jpg" alt="service_cover">
+                        <h3 class="service_category"> Արտագնա Տուրիզմ</h3>
+                        <div class="service_items_text">
+                            <h3>Արտագնա Տուրիզմ</h3>
+                            <p>Մենք առաջարկում ենք միասին շրջակայել ամբողջ աշխարհով․․․</p>
+                            <a href="service.html">Տեսնել ավելին</a>
+                        </div>
+                    </div>
+                    <div class="service_item">
+                        <img src="./img/hotel.jpg" alt="service_cover">
+                        
+                        <h3 class="service_category"> Հյուրանոցների լայն տեսականի </h3>
+
+                        <div class="service_items_text">
+                            <h3>Հյուրանոցների լայն տեսականի</h3>
+                            <p>Մենք առաջարկում ենք Հյուրանոցների լայն տեսականի․․․</p>
+                            <a href="service.html">Տեսնել ավելին</a>
+                        </div>
+                    </div>
+                    <div class="service_item">
+                        <img src="./img/pool.jpg" alt="service_cover">
+
+                        <h3 class="service_category"> Լողավազաններ </h3>
+
+                        <div class="service_items_text">
+                            <h3>Լողավազաններ</h3>
+                            <p>Մենք առաջարկում ենք բացօթյա և ջեռուցվող լողավազաններ․․․</p>
+                            <a href="service.html">Տեսնել ավելին</a>
+                        </div>
+                    </div>
+                    <div class="service_item">
+                        <img src="./img/ingoing.jpg" alt="service_cover">
+                        <h3 class="service_category"> Ներգնա Տուրիզմ</h3>
+                        <div class="service_items_text">
+                            <h3>Ներգնա Տուրիզմ</h3>
+                            <p>Մենք առաջարկում ենք միասին շրջակայել Հայաստանի ներսով․․․</p>
+                            <a href="service.html">Տեսնել ավելին</a>
+                        </div>
+                    </div>
+                    <div class="service_item">
+                        <img src="./img/outgoing.jpg" alt="service_cover">
+                        <h3 class="service_category"> Արտագնա Տուրիզմ</h3>
+                        <div class="service_items_text">
+                            <h3>Արտագնա Տուրիզմ</h3>
+                            <p>Մենք առաջարկում ենք միասին շրջակայել ամբողջ աշխարհով․․․</p>
+                            <a href="service.html">Տեսնել ավելին</a>
+                        </div>
+                    </div>
+                    <div class="service_item">
+                        <img src="./img/hotel.jpg" alt="service_cover">
+                        
+                        <h3 class="service_category"> Հյուրանոցների լայն տեսականի </h3>
+
+                        <div class="service_items_text">
+                            <h3>Հյուրանոցների լայն տեսականի</h3>
+                            <p>Մենք առաջարկում ենք Հյուրանոցների լայն տեսականի․․․</p>
+                            <a href="service.html">Տեսնել ավելին</a>
+                        </div>
+                    </div>
+                    <div class="service_item">
+                        <img src="./img/pool.jpg" alt="service_cover">
+
+                        <h3 class="service_category"> Լողավազաններ </h3>
+
+                        <div class="service_items_text">
+                            <h3>Լողավազաններ</h3>
+                            <p>Մենք առաջարկում ենք բացօթյա և ջեռուցվող լողավազաններ․․․</p>
+                            <a href="service.html">Տեսնել ավելին</a>
+                        </div>
+                    </div>
+                    <div class="service_item">
+                        <img src="./img/ingoing.jpg" alt="service_cover">
+                        <h3 class="service_category"> Ներգնա Տուրիզմ</h3>
+                        <div class="service_items_text">
+                            <h3>Ներգնա Տուրիզմ</h3>
+                            <p>Մենք առաջարկում ենք միասին շրջակայել Հայաստանի ներսով․․․</p>
+                            <a href="service.html">Տեսնել ավելին</a>
+                        </div>
+                    </div>
+                    <div class="service_item">
+                        <img src="./img/outgoing.jpg" alt="service_cover">
+                        <h3 class="service_category"> Արտագնա Տուրիզմ</h3>
+                        <div class="service_items_text">
+                            <h3>Արտագնա Տուրիզմ</h3>
+                            <p>Մենք առաջարկում ենք միասին շրջակայել ամբողջ աշխարհով․․․</p>
+                            <a href="service.html">Տեսնել ավելին</a>
+                        </div>
+                    </div>
+                    <div class="service_item">
+                        <img src="./img/hotel.jpg" alt="service_cover">
+                        
+                        <h3 class="service_category"> Հյուրանոցների լայն տեսականի </h3>
+
+                        <div class="service_items_text">
+                            <h3>Հյուրանոցների լայն տեսականի</h3>
+                            <p>Մենք առաջարկում ենք Հյուրանոցների լայն տեսականի․․․</p>
+                            <a href="service.html">Տեսնել ավելին</a>
+                        </div>
+                    </div>
+                    <div class="service_item">
+                        <img src="./img/pool.jpg" alt="service_cover">
+
+                        <h3 class="service_category"> Լողավազաններ </h3>
+
+                        <div class="service_items_text">
+                            <h3>Լողավազաններ</h3>
+                            <p>Մենք առաջարկում ենք բացօթյա և ջեռուցվող լողավազաններ․․․</p>
+                            <a href="service.html">Տեսնել ավելին</a>
+                        </div>
+                    </div>
+                    <div class="service_item">
+                        <img src="./img/ingoing.jpg" alt="service_cover">
+                        <h3 class="service_category"> Ներգնա Տուրիզմ</h3>
+                        <div class="service_items_text">
+                            <h3>Ներգնա Տուրիզմ</h3>
+                            <p>Մենք առաջարկում ենք միասին շրջակայել Հայաստանի ներսով․․․</p>
+                            <a href="service.html">Տեսնել ավելին</a>
+                        </div>
+                    </div>
+                    <div class="service_item">
+                        <img src="./img/outgoing.jpg" alt="service_cover">
+                        <h3 class="service_category"> Արտագնա Տուրիզմ</h3>
+                        <div class="service_items_text">
+                            <h3>Արտագնա Տուրիզմ</h3>
+                            <p>Մենք առաջարկում ենք միասին շրջակայել ամբողջ աշխարհով․․․</p>
+                            <a href="service.html">Տեսնել ավելին</a>
+                        </div>
+                    </div>
+                    <div class="service_item">
+                        <img src="./img/hotel.jpg" alt="service_cover">
+                        
+                        <h3 class="service_category"> Հյուրանոցների լայն տեսականի </h3>
+
+                        <div class="service_items_text">
+                            <h3>Հյուրանոցների լայն տեսականի</h3>
+                            <p>Մենք առաջարկում ենք Հյուրանոցների լայն տեսականի․․․</p>
+                            <a href="service.html">Տեսնել ավելին</a>
+                        </div>
+                    </div>
+                    <div class="service_item">
+                        <img src="./img/pool.jpg" alt="service_cover">
+
+                        <h3 class="service_category"> Լողավազաններ </h3>
+
+                        <div class="service_items_text">
+                            <h3>Լողավազաններ</h3>
+                            <p>Մենք առաջարկում ենք բացօթյա և ջեռուցվող լողավազաններ․․․</p>
+                            <a href="service.html">Տեսնել ավելին</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="pagination">
+                    <a href="#" class="active_pagination">1</a>
+                    <a href="#">2</a>
+                    <a href="#">3</a>
+                    <a href="#">4</a>
+                    <a href="#">5</a>
+                </div>
+            </section>
+            <!-- services block end -->
+            <!-- offers block start -->
+            <section class="offers ms_style">
+                <h2 class="title">Առաջարկվող Փաթեթներ</h2>
+
+                <div class="offer_items">
+                    <div class="offer_item">
+                        <h3>Silver Փաթեթ</h3>
+
+                        <ul>
+                            <li>Նախաճաշ</li>
+                            <li>Free wifi</li>
+                            <li>Ավտոկայանատեղի</li>
+                            <li>Արշավներ</li>
+                            <li>Ընթրիք *1</li>
+                        </ul>
+                        <button data-modal-btn>Պատվիրել</button>
+                    </div>
+                    <div class="offer_item">
+                        <h3>Gold Փաթեթ</h3>
+                        <ul>
+                            <li>Դիմավորել / Ճանապարհել</li>
+                            <li>Նախաճաշ</li>
+                            <li>Free wifi</li>
+                            <li>Հսկվող Ավտոկայանատեղի</li>
+                            <li>Արշավներ</li>
+                            <li>Ընթրիք *2</li>
+                            <li>Բացօթյա և տաքացվող լողավազան</li>
+                        </ul>
+                        <button data-modal-btn>Պատվիրել</button>
+                    </div>
+                    <div class="offer_item">
+                        <h3>VIP Փաթեթ</h3>
+                        <ul>
+                            <li>Դիմավորել / Ճանապարհել</li>
+                            <li>Նախաճաշ</li>
+                            <li>Free wifi</li>
+                            <li>Հսկվող Ավտոկայանատեղի</li>
+                            <li>Արշավներ</li>
+                            <li>Ընթրիք *3</li>
+                            <li>Շոգեբաղնիք</li>
+                            <li>Բացօթյա և տաքացվող լողավազան</li>
+                            <li>Խաղային Սրահներ</li>
+                        </ul>
+                        <button data-modal-btn>Պատվիրել</button>
+                    </div>
+                </div>
+            </section>
+            <!-- offers block end -->
+            <!-- partner block start -->
+            <section class="partners ms_style">
+                <h2 class="title">Մեր Գործընկերները</h2>
+
+                <!-- Slider main container -->
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <a href="https://www.marriott.com/hotels/travel/evnmc-armenia-marriott-hotel-yerevan/" target="_blank">
+                                <img src="img/partner.png" alt="partner">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="https://www.marriott.com/hotels/travel/evnmc-armenia-marriott-hotel-yerevan/" target="_blank">
+                                <img src="img/partner.png" alt="partner">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="https://www.marriott.com/hotels/travel/evnmc-armenia-marriott-hotel-yerevan/" target="_blank">
+                                <img src="img/partner.png" alt="partner">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="https://www.marriott.com/hotels/travel/evnmc-armenia-marriott-hotel-yerevan/" target="_blank">
+                                <img src="img/partner.png" alt="partner">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="https://www.marriott.com/hotels/travel/evnmc-armenia-marriott-hotel-yerevan/" target="_blank">
+                                <img src="img/partner.png" alt="partner">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="https://www.marriott.com/hotels/travel/evnmc-armenia-marriott-hotel-yerevan/" target="_blank">
+                                <img src="img/partner.png" alt="partner">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="https://www.marriott.com/hotels/travel/evnmc-armenia-marriott-hotel-yerevan/" target="_blank">
+                                <img src="img/partner.png" alt="partner">
+                            </a>
+                        </div>
+                        
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-prev swiper-button-blue"></div>
+                    <div class="swiper-button-next swiper-button-blue"></div>
+                </div>
+            </section>
+            <!-- partner block end -->
+        </section>
+    </main>
+    <!-- main block end -->
+    <!-- footer block start -->
+    <footer>
+        <section class="footer container">
+            <div class="footer_top_item">
+                <img src="img/logo.png" alt="logo">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, magni.</p>
+            </div>
+            <div class="footer_top_item">
+                <p class="footer_top_item_title">Իմ Էջը</p>
+                <a href="#">Մուտք</a>
+                <a href="#">Գրանցում</a>
+                <br>
+                <a href="#">Օգնություն</a>
+            </div>
+            <div class="footer_top_item">
+                <p class="footer_top_item_title">Օգտակար Հղումներ</p>
+                <ul id="nav_menu">
+                    <li><a href="services.html">Ծառայություններ</a></li>
+                    <li><a href="about.html">Մեր Մասին</a></li>
+                    <li><a href="contact.html">Կապ</a></li>
+                </ul>
+            </div>
+            <div class="footer_top_item">
+                <p class="footer_top_item_title">Միացեք մեզ</p>
+                <ul>
+                    <li><a href="#">Մենք Facebook-ում</a></li>
+                    <li><a href="#">Մենք Instagram-ում</a></li>
+                    <li><a href="#">Մենք Twitter-ում</a></li>
+                    <li><a href="#">Մենք YouTube-ում</a></li>
+                </ul>
+            </div>
+        </section>
+        <div class="footer_bottom">
+            <div class="container">
+                <div class="web_info">
+                    Բոլոր Իրավունքները Պաշտպանված Են  &copy; 2021
+                </div>
+                <div class="created">
+                    Կայքը պատրաստել է <a href="https://www.facebook.com/HayrapetyanStyle" target="_blank">HayrapetyanStyle</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer block end -->
+    <!-- modal popup start -->
+
+    <div class="modal" data-offer-modal>
+        <form action="#" name="offers">
+            <span data-offer-close>
+                <?xml version="1.0" encoding="iso-8859-1"?>
+                <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                    width="357px" height="357px" viewBox="0 0 357 357" style="enable-background:new 0 0 357 357;" xml:space="preserve">
+                    <g>
+                        <g id="close">
+                            <polygon points="357,35.7 321.3,0 178.5,142.8 35.7,0 0,35.7 142.8,178.5 0,321.3 35.7,357 178.5,214.2 321.3,357 357,321.3 
+                                214.2,178.5 		"/>
+                        </g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                </svg>
+            </span>
+            <h3 class="sub_title">Վճարել</h3>
+            <input type="text" placeholder="Անուն Ազգանուն">
+            <p data-offerPrice></p>
+            <input type="text" placeholder="Քարտի թվեր օր․՝ 1234 5678 9112 5545">
+            <input type="submit" data-modal-submit>
+        </form>
+    </div>
+
+    <div class="modal" data-memberCount-modal>
+        <div class="member_count_options">
+            <span data-count-close>
+                <?xml version="1.0" encoding="iso-8859-1"?>
+                <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                    width="357px" height="357px" viewBox="0 0 357 357" style="enable-background:new 0 0 357 357;" xml:space="preserve">
+                    <g>
+                        <g id="close">
+                            <polygon points="357,35.7 321.3,0 178.5,142.8 35.7,0 0,35.7 142.8,178.5 0,321.3 35.7,357 178.5,214.2 321.3,357 357,321.3 
+                                214.2,178.5 		"/>
+                        </g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                </svg>
+            </span>
+            <h3 class="sub_title">Խնդրում ենք ընտրել</h3>
+            <div class="mco_wrap">
+                <!-- fot adulst 18+ -->
+                <div class="aduls mco_item">
+                    Մեծահասակներ։ 
+                    <div class="mco_counter">
+                        <button data-minus>-</button>
+                        <span data-resault>0</span>
+                        <button data-plus>+</button>
+                    </div>
+                </div>
+
+                <!-- fot child 18- -->
+                <div class="child mco_item">
+                    Երեխաներ։ 
+                    <div class="mco_counter">
+                        <button data-minus>-</button>
+                        <span data-resault>0</span>
+                        <button data-plus>+</button>
+                    </div>
+                </div>
+
+                <!-- fot rooms-->
+                <div class="room_count mco_item">
+                    Սենյակի համար։ 
+                    <div class="mco_counter">
+                        <button data-minus>-</button>
+                        <span data-resault>0</span>
+                        <button data-plus>+</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- modal popup end -->
+
+    <script src="./js/jquery-3.2.0.min.js"></script>
+    <script src="./js/script.js"></script>
+
+    <!-- swiper init -->
+    <script src="./libs/swiper.min.js"></script>
+</body>
+</html>

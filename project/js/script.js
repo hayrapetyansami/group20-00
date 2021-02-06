@@ -79,4 +79,48 @@ window.addEventListener('load', () => {
     counterFilter(minusBtn[0], plusBtn[0], counterResault[0]);
     counterFilter(minusBtn[1], plusBtn[1], counterResault[1]);
     counterFilter(minusBtn[2], plusBtn[2], counterResault[2]);
+
+    const swiper = new Swiper('.swiper-container', {
+        slidesPerView: 5,
+        spaceBetween: 15,
+        loop: true,
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            type: 'progressbar',
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        breakpoints: {
+            520: {
+                slidesPerView: 1,
+            },
+            768: {
+                slidesPerView: 2,
+            },
+            980: {
+                slidesPerView: 3,
+            },
+            1140: {
+                slidesPerView: 4,
+            }
+        }
+    });
+
+    const swiperSlide = document.querySelectorAll('.swiper-slide');
+
+    swiperSlide.forEach(slide => {
+        slide.addEventListener('mouseover', () => {
+            swiper.autoplay.stop();
+        });
+        
+        slide.addEventListener('mouseleave', () => {
+            swiper.autoplay.start();
+        });
+    });
 });
