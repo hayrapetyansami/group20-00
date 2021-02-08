@@ -972,7 +972,6 @@ footer {
     }
 
     .member_count_options{
-
         [data-count-close] {
             position: absolute;
             top: 11px;
@@ -991,7 +990,7 @@ footer {
         h3 {
             margin-top: 0px;   
         }
-        .mco_wrap {
+        [data-count-form] {
             .mco_item {
                 margin: 8px 0px;
                 display: flex;
@@ -1006,9 +1005,17 @@ footer {
                     }
                 }
             }
+            [data-count-sumbit] {
+                display: inline-block;
+                margin-top: 10px;
+                width: 100%;
+                cursor: pointer;
+                padding: 8px 15px;
+                background: $lightBG;
+                color: $white;
+                border: 1px solid $lightBG;
+            }
         }
-
-        
     }
 }
 

@@ -1153,7 +1153,7 @@ footer .footer_bottom .container a {
   margin-top: 0px;
 }
 
-.modal .member_count_options .mco_wrap .mco_item {
+.modal .member_count_options [data-count-form] .mco_item {
   margin: 8px 0px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1163,11 +1163,22 @@ footer .footer_bottom .container a {
           justify-content: space-between;
 }
 
-.modal .member_count_options .mco_wrap .mco_item .mco_counter button {
+.modal .member_count_options [data-count-form] .mco_item .mco_counter button {
   padding: 5px 10px;
   background: #C5CAE9;
   color: #fff;
   border: none;
   cursor: pointer;
+}
+
+.modal .member_count_options [data-count-form] [data-count-sumbit] {
+  display: inline-block;
+  margin-top: 10px;
+  width: 100%;
+  cursor: pointer;
+  padding: 8px 15px;
+  background: #3F51B5;
+  color: #fff;
+  border: 1px solid #3F51B5;
 }
 /*# sourceMappingURL=style.css.map */
