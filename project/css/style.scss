@@ -136,6 +136,72 @@ p {
     }
 }
 
+.social_block {
+    position: fixed;
+    top: 30vh;
+    left: 10px;
+    padding: 10px 0px 0px 0px;
+    z-index: 555;
+    background: #fff;
+
+    @media screen and (max-width: 768px) {
+        left: 0;
+    }
+
+    @media screen and (max-width: 580px) {
+        display: none;
+    }
+
+    p {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        font-weight: bold;
+        letter-spacing: 3px;
+        writing-mode: vertical-rl;
+        color: #666;
+        position: relative;
+        padding-bottom: 55px;
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 5px;
+            right: 20px;
+            width: 3px;
+            height: 40px;
+            background: #666;
+        }
+    }
+
+    li {
+        display: flex;
+        flex-flow: column;
+        list-style-type: none;
+
+        a {
+            display: block;
+            width: 45px;
+            height: 45px;
+            text-decoration: none;
+            overflow: hidden;
+
+            svg {
+                width: 100%;
+                height: 100%;
+                transition: transform .5s;
+            }
+
+            &:hover {
+                svg {
+                    transform: scale(0.9);
+                }
+            }
+        }
+    }
+}
+
 // global styles end
 
 body {
@@ -225,11 +291,24 @@ nav {
             }
         }
 
+        #logBtn {
+            svg {
+                cursor: pointer;
+                fill: $white;
+                width: 32px;
+                height: 32px;
+            }
+        }
+
         @media screen and (max-width: 768px) {
             position: relative;
             min-height: 80px;
 
             .logo {
+                order: 3;
+            }
+
+            #logBtn {
                 order: 2;
             }
 
@@ -803,6 +882,28 @@ main {
                 }
             }
         }
+
+        .reset {
+            form {
+                margin-top: 10px;
+
+                input {
+                    padding: 10px;
+                    font-size: 15px;
+
+                    &[type=text] {
+                        border: 1px solid #ccc;
+                    }
+
+                    &[type=submit] {
+                        background: #42b983;
+                        border: none;
+                        cursor: pointer;
+                        color: $white;
+                    }
+                }
+            }
+        }
     }
 }
 // main style end
@@ -913,7 +1014,7 @@ footer {
     background: rgba(0, 0, 0, 0.8);
     z-index: 99999;
 
-    form, .member_count_options {
+    [data-offer-form], .member_count_options, .login_or_reg {
         background: $white;
         padding: 20px;
         margin: 0 20px;
@@ -922,7 +1023,7 @@ footer {
         position: relative;
     }
 
-    form {
+    [data-offer-form] {
         [data-offer-close] {
             position: absolute;
             top: 11px;
@@ -1015,6 +1116,159 @@ footer {
                 color: $white;
                 border: 1px solid $lightBG;
             }
+        }
+    }
+
+    .login_or_reg {
+        position: relative;
+
+        .tab_toggle {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+
+            .open_log, .open_reg {
+                padding: 10px;
+                cursor: pointer;
+                font-size: 14px;
+            }
+
+            .active_tab {
+                background: $lightBG;
+                color: $white;
+            }
+        }
+        [data-close-logmodal] {
+            text-align: center;
+            line-height: 33px;
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            background: #f00;
+            color: $white;
+            font-size: 22px;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all .5s;
+
+            &:hover {
+                background: #d00;
+                transform: rotate(-90deg);
+            }
+        }
+        [data-log],[data-reg] {
+            & > input {
+                display: block;
+                width: 100%;
+                padding: 10px;
+                border: 1px solid #ccc;
+                margin-bottom: 8px;
+            }
+
+            a {
+                font-size: 13px;
+                color: $lightBlue;
+            }
+
+            p {
+                font-size: 14px;
+                color: #d00;
+                margin: 10px 0px 5px 0px;
+            }
+
+            #file {
+                display: none;
+            }
+
+            .birthday {
+                select {
+                    padding: 7px 10px;
+                    border: 1px solid #ccc;
+                    cursor: pointer;
+                }
+            }
+
+            .sex {
+                margin-bottom: 10px;
+                label {
+                    margin-right: 10px;
+                    font-size: 14px;
+                    cursor: pointer;
+
+                    input {
+                        margin-right: 5px;
+                        cursor: pointer;
+                        position: relative;
+
+                        &::before {
+                            content: '';
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 15px;
+                            height: 15px;
+                            background: rgb(13, 143, 250);
+                        }
+
+                        &::after {
+                            display: none;
+                            content: '✔';
+                            position: absolute;
+                            top: -2px;
+                            left: 2px;
+                            width: 15px;
+                            height: 15px;
+                            color: #fff;
+                        }
+
+                        &:checked {
+                            &::after{
+                                display: block;
+                            }
+                        }
+                    }
+                }
+            }
+
+            [data-add-image] {
+                background: rgb(13, 143, 250);
+                border-style: solid;
+                border-color: rgb(13, 143, 250);
+                cursor: pointer;
+                color: $white;
+                padding: 10px;
+                display: block;
+                width: 100%;
+            }
+            input[type=submit] {
+                background: #42b983;
+                border-color: #42b983;
+                cursor: pointer;
+                color: $white;
+                margin-top: 15px;
+            }
+
+            @media screen and (max-width: 380px) {
+                .sex {
+                    label {
+                        margin-right: unset;
+                        margin-bottom: 10px;
+                        display: block;
+                    }
+                }
+                .birthday {
+                    select {
+                        display: block;
+                        width: 100%;
+                        margin-bottom: 5px;
+                    }
+                }
+            }
+        }
+        [data-reg] {
+            display: none;
         }
     }
 }

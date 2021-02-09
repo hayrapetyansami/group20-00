@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="hy">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Booking By Us </title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <!-- navigation block start -->
+    <nav>
+        <section class="nav container">
+            <!-- navigation logo -->
+            <div class="logo">
+                <a href="index.html">
+                    <img src="img/logo.png" alt="logo">
+                </a>
+            </div>
+            <!-- navigation logo -->
+
+            <!-- when screen witdth < 768px -->
+            <div id="mobile_menu_btn">
+                <?xml version="1.0" encoding="iso-8859-1"?>
+                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                        viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                    <g>
+                        <g>
+                            <path d="M492,236H20c-11.046,0-20,8.954-20,20c0,11.046,8.954,20,20,20h472c11.046,0,20-8.954,20-20S503.046,236,492,236z"/>
+                        </g>
+                    </g>
+                    <g>
+                        <g>
+                            <path d="M492,76H20C8.954,76,0,84.954,0,96s8.954,20,20,20h472c11.046,0,20-8.954,20-20S503.046,76,492,76z"/>
+                        </g>
+                    </g>
+                    <g>
+                        <g>
+                            <path d="M492,396H20c-11.046,0-20,8.954-20,20c0,11.046,8.954,20,20,20h472c11.046,0,20-8.954,20-20
+                                C512,404.954,503.046,396,492,396z"/>
+                        </g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                </svg>
+            </div>
+            <!-- when screen witdth < 768px -->
+
+            <!-- our site menu start -->
+            <ul id="nav_menu">
+                <li><a href="services.html">Ծառայություններ</a></li>
+                <li><a href="about.html">Մեր Մասին</a></li>
+                <li><a href="contact.html">Կապ</a></li>
+                <form action="#" name="search" autocomplete="off" data-search>
+                    <input type="text" name="search_value" placeholder="Որոնում․․․">
+                </form>
+            </ul>
+            <!-- our site menu end -->
+
+            <!-- login/registration modal start -->
+            <div id="logBtn">
+                <?xml version="1.0" encoding="iso-8859-1"?>
+                <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                        width="45.532px" height="45.532px" viewBox="0 0 45.532 45.532" style="enable-background:new 0 0 45.532 45.532;"
+                        xml:space="preserve">
+                    <g>
+                        <path d="M22.766,0.001C10.194,0.001,0,10.193,0,22.766s10.193,22.765,22.766,22.765c12.574,0,22.766-10.192,22.766-22.765
+                            S35.34,0.001,22.766,0.001z M22.766,6.808c4.16,0,7.531,3.372,7.531,7.53c0,4.159-3.371,7.53-7.531,7.53
+                            c-4.158,0-7.529-3.371-7.529-7.53C15.237,10.18,18.608,6.808,22.766,6.808z M22.761,39.579c-4.149,0-7.949-1.511-10.88-4.012
+                            c-0.714-0.609-1.126-1.502-1.126-2.439c0-4.217,3.413-7.592,7.631-7.592h8.762c4.219,0,7.619,3.375,7.619,7.592
+                            c0,0.938-0.41,1.829-1.125,2.438C30.712,38.068,26.911,39.579,22.761,39.579z"/>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                </svg>
+            </div>
+            <div class="modal" data-loginOrReg-modal>
+                <div class="login_or_reg">
+                    <div class="tab_toggle">
+                        <div class="open_log">Մուտք</div>
+                        <div class="open_reg">Գրանցում</div>
+                    </div>
+                    <div data-close-logmodal>&times;</div>
+
+                    <form action="#" autocomplete="off" data-log name="login">
+                        <input type="text" placeholder="Մուտքանուն / Էլ․ հասցե">
+                        <input type="password" placeholder="Գաղտնաբառ">
+                        <input type="submit" value="Մուտք">
+                        <a href="reset.html">Վերականգնել գաղտնաբառը</a>
+                    </form>
+                    <form action="#" autocomplete="off" data-reg name="reg">
+                        <input type="text" placeholder="ԱՆուն" name="lastname">
+                        <input type="text" placeholder="Ազգանուն" name="surname">
+                        <input type="email" placeholder="Էլ․ հասցե" name="email">
+                        <input type="tel" placeholder="Հեռ․ համար" name="telephone">
+                        <input type="password" placeholder="Հորինեք գաղտնաբառ" name="newpassword">
+                        <div class="sex">
+                            <p>Ընտրեք Ձեր սեռը։</p>
+                            <label><input type="radio" name="sex" value="male" checked>Արական</label>
+                            <label><input type="radio" name="sex" value="female">Իգական</label>
+                            <label><input type="radio" name="sex" value="other">Այլ</label>
+                        </div>
+                        <div class="birthday">
+                            <select name="day">
+                                <option value="01">1</option>
+                                <option value="02">2</option>
+                                <option value="03">3</option>
+                                <option value="04">4</option>
+                                <option value="05">5</option>
+                                <option value="06">6</option>
+                                <option value="07">7</option>
+                                <option value="08">8</option>
+                                <option value="09">9</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                                <option value="13">13</option>
+                                <option value="14">14</option>
+                                <option value="15">15</option>
+                                <option value="16" selected>16</option>
+                                <option value="17">17</option>
+                                <option value="18">18</option>
+                                <option value="19">19</option>
+                                <option value="20">20</option>
+                                <option value="21">21</option>
+                                <option value="22">22</option>
+                                <option value="23">23</option>
+                                <option value="24">24</option>
+                                <option value="25">25</option>
+                                <option value="26">26</option>
+                                <option value="27">27</option>
+                                <option value="28">28</option>
+                                <option value="29">29</option>
+                                <option value="30">30</option>
+                                <option value="31">31</option>
+                            </select>
+                            <select name="month"> 
+                                <option value="01">Հունվար</option>
+                                <option value="02">Փետրվար</option>
+                                <option value="03">Մարտ</option>
+                                <option value="04">Ապրիլ</option>
+                                <option value="05" selected>Մայիս</option>
+                                <option value="06">Հունիս</option>
+                                <option value="07">Հուլիս</option>
+                                <option value="08">Օգոստոս</option>
+                                <option value="09">Սեպտեմբեր</option>
+                                <option value="10">Հոկտեմբեր</option>
+                                <option value="11">Նոյեմբեր</option>
+                                <option value="12">Դեկտեմբեր</option>
+                            </select>
+                            <select name="year"> 
+                                <option value="2030">2030</option>
+                                <option value="2029">2029</option>
+                                <option value="2028">2028</option>
+                                <option value="2027">2027</option>
+                                <option value="2026">2026</option>
+                                <option value="2025">2025</option>
+                                <option value="2024">2024</option>
+                                <option value="2023">2023</option>
+                                <option value="2022">2022</option>
+                                <option value="2021">2021</option>
+                                <option value="2020">2020</option>
+                                <option value="2019">2019</option>
+                                <option value="2018" >2018</option>
+                                <option value="2017">2017</option>
+                                <option value="2016">2016</option>
+                                <option value="2015">2015</option>
+                                <option value="2014">2014</option>
+                                <option value="2013">2013</option>
+                                <option value="2012">2012</option>
+                                <option value="2011">2011</option>
+                                <option value="2010" selected>2010</option>
+                                <option value="2009">2009</option>
+                                <option value="2008">2008</option>
+                                <option value="2007">2007</option>
+                                <option value="2006">2006</option>
+                                <option value="2005">2005</option>
+                                <option value="2004">2004</option>
+                                <option value="2003">2003</option>
+                                <option value="2002">2002</option>
+                                <option value="2001">2001</option>
+                                <option value="2000">2000</option>
+                                <option value="1999">1999</option>
+                                <option value="1998">1998</option>
+                                <option value="1997">1997</option>
+                                <option value="1996">1996</option>
+                                <option value="1995">1995</option>
+                                <option value="1994">1994</option>
+                                <option value="1993">1993</option>
+                                <option value="1992">1992</option>
+                                <option value="1991">1991</option>
+                                <option value="1990">1990</option>
+                                <option value="1989">1989</option>
+                                <option value="1988">1988</option>
+                                <option value="1987">1987</option>
+                                <option value="1986">1986</option>
+                                <option value="1985">1985</option>
+                                <option value="1984">1984</option>
+                                <option value="1983">1983</option>
+                                <option value="1982">1982</option>
+                                <option value="1981">1981</option>
+                                <option value="1980">1980</option>
+                                <option value="1979">1979</option>
+                                <option value="1978">1978</option>
+                                <option value="1977">1977</option>
+                                <option value="1976">1976</option>
+                                <option value="1975">1975</option>
+                                <option value="1974">1974</option>
+                                <option value="1973">1973</option>
+                                <option value="1972">1972</option>
+                                <option value="1971">1971</option>
+                                <option value="1970">1970</option>
+                                <option value="1969">1969</option>
+                                <option value="1968">1968</option>
+                                <option value="1967">1967</option>
+                                <option value="1966">1966</option>
+                                <option value="1965">1965</option>
+                                <option value="1964">1964</option>
+                                <option value="1963">1963</option>
+                                <option value="1962">1962</option>
+                                <option value="1961">1961</option>
+                                <option value="1960">1960</option>
+                                <option value="1959">1959</option>
+                                <option value="1958">1958</option>
+                                <option value="1957">1957</option>
+                                <option value="1956">1956</option>
+                                <option value="1955">1955</option>
+                                <option value="1954">1954</option>
+                                <option value="1953">1953</option>
+                                <option value="1952">1952</option>
+                                <option value="1951">1951</option>
+                                <option value="1950">1950</option>
+                                <option value="1949">1949</option>
+                                <option value="1948">1948</option>
+                                <option value="1947">1947</option>
+                                <option value="1946">1946</option>
+                                <option value="1945">1945</option>
+                                <option value="1944">1944</option>
+                                <option value="1943">1943</option>
+                                <option value="1942">1942</option>
+                                <option value="1941">1941</option>
+                                <option value="1940">1940</option>
+                                <option value="1939">1939</option>
+                                <option value="1938">1938</option>
+                                <option value="1937">1937</option>
+                                <option value="1936">1936</option>
+                                <option value="1935">1935</option>
+                                <option value="1934">1934</option>
+                                <option value="1933">1933</option>
+                                <option value="1932">1932</option>
+                                <option value="1931">1931</option>
+                                <option value="1930">1930</option>
+                                <option value="1929">1929</option>
+                                <option value="1928">1928</option>
+                                <option value="1927">1927</option>
+                                <option value="1926">1926</option>
+                                <option value="1925">1925</option>
+                                <option value="1924">1924</option>
+                                <option value="1923">1923</option>
+                                <option value="1922">1922</option>
+                                <option value="1921">1921</option>
+                                <option value="1920">1920</option>
+                                <option value="1919">1919</option>
+                                <option value="1918">1918</option>
+                                <option value="1917">1917</option>
+                                <option value="1916">1916</option>
+                                <option value="1915">1915</option>
+                                <option value="1914">1914</option>
+                                <option value="1913">1913</option>
+                                <option value="1912">1912</option>
+                                <option value="1911">1911</option>
+                                <option value="1910">1910</option>
+                                <option value="1909">1909</option>
+                                <option value="1908">1908</option>
+                                <option value="1907">1907</option>
+                                <option value="1906">1906</option>
+                                <option value="1905">1905</option>
+                                <option value="1904">1904</option>
+                                <option value="1903">1903</option>
+                                <option value="1902">1902</option>
+                                <option value="1901">1901</option>
+                                <option value="1900">1900</option>
+                            </select>
+                        </div>
+                        <p>Խնդրում ենք վերբեռնել Ձեր լուսանկարը</p>
+                        <input type="file" id="file">
+                        <button data-add-image>Վերբեռնել նկար</button>
+
+                        <input type="submit" value="Գրանցվել">
+                    </form>
+                </div>
+            </div>
+            <!-- login/registration modal end -->
+        </section>
+    </nav>
+    <!-- navigation block end -->
+
+    <!-- header block start -->
+    <header style="background-image: url(./img/headerBG.jpg);">
+        <section class="header container">
+            <form action="#" name="filter">
+                <input type="text" placeholder="Ու՞ր եք ցանկանում գնալ">
+                <input type="text" placeholder="Մուտք և Ելք">
+
+                <!-- member count block wrapper start -->
+                <div class="member_count">
+                    <p>Անձերի քանակը</p>
+                </div>
+                <!-- member count block wrapper end -->
+
+                <select name="stars">
+                    <option value="#" readonly>Ընտրեք ըստ աստղերի</option>
+                    <option value="1">1 Աստղ</option>
+                    <option value="2">2 Աստղ</option>
+                    <option value="3">3 Աստղ</option>
+                    <option value="4">4 Աստղ</option>
+                    <option value="5">5 Աստղ</option>
+                </select>
+                <input type="submit" value="Որոնել">
+            </form>
+        </section>
+    </header>
+    <!-- header block end -->
+
+    <!-- main block start -->
+    <main>
+        <section class="main container">
+            <!-- reset block start -->
+            <section class="reset ms_style">
+                <h1 class="title">Վերականգնել Գաղտնաբառը</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam voluptatibus quidem consequuntur corrupti non mollitia.</p>
+                <form action="#" autocomplete="off" name="reset_password">
+                    <input type="text" placeholder="Մուտքագրեք Ձեր էլ․ հասցեն">
+                    <input type="submit" value="Վերականգնել">
+                </form>
+            </section>
+            <!-- reset block end -->
+            <!-- contact block start -->
+            <section class="contact ms_style">
+                <h2 class="title">Կապ Մեզ Հետ</h2>
+                <div class="contact_items">
+                    <div class="contact_item-info">
+                        <div class="contact_info">
+                            <?xml version="1.0" encoding="iso-8859-1"?>
+                            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                            <g>
+                                <g>
+                                    <path d="M256,0C153.755,0,70.573,83.182,70.573,185.426c0,126.888,165.939,313.167,173.004,321.035
+                                        c6.636,7.391,18.222,7.378,24.846,0c7.065-7.868,173.004-194.147,173.004-321.035C441.425,83.182,358.244,0,256,0z M256,278.719
+                                        c-51.442,0-93.292-41.851-93.292-93.293S204.559,92.134,256,92.134s93.291,41.851,93.291,93.293S307.441,278.719,256,278.719z"/>
+                                </g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            </svg>
+                            Հայաստան, Ք․ Երևան, Սարյան 8
+                        </div>
+                        <div class="contact_info">
+                            <?xml version="1.0" encoding="iso-8859-1"?>
+                            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                viewBox="0 0 51.413 51.413" style="enable-background:new 0 0 51.413 51.413;" xml:space="preserve">
+                            <g>
+                                <g>
+                                    <path d="M25.989,12.274c8.663,0.085,14.09-0.454,14.823,9.148h10.564c0-14.875-12.973-16.88-25.662-16.88
+                                        c-12.69,0-25.662,2.005-25.662,16.88h10.482C11.345,11.637,17.398,12.19,25.989,12.274z"/>
+                                    <path d="M5.291,26.204c2.573,0,4.714,0.154,5.19-2.377c0.064-0.344,0.101-0.734,0.101-1.185H10.46H0
+                                        C0,26.407,2.369,26.204,5.291,26.204z"/>
+                                    <path d="M40.88,22.642h-0.099c0,0.454,0.039,0.845,0.112,1.185c0.502,2.334,2.64,2.189,5.204,2.189
+                                        c2.936,0,5.316,0.193,5.316-3.374H40.88z"/>
+                                    <path d="M35.719,20.078v-1.496c0-0.669-0.771-0.711-1.723-0.711h-1.555c-0.951,0-1.722,0.042-1.722,0.711
+                                        v1.289v1h-11v-1v-1.289c0-0.669-0.771-0.711-1.722-0.711h-1.556c-0.951,0-1.722,0.042-1.722,0.711v1.496v1.306
+                                        C12.213,23.988,4.013,35.073,3.715,36.415l0.004,8.955c0,0.827,0.673,1.5,1.5,1.5h40c0.827,0,1.5-0.673,1.5-1.5v-9
+                                        c-0.295-1.303-8.493-12.383-11-14.987V20.078z M19.177,37.62c-0.805,0-1.458-0.652-1.458-1.458s0.653-1.458,1.458-1.458
+                                        s1.458,0.652,1.458,1.458S19.982,37.62,19.177,37.62z M19.177,32.62c-0.805,0-1.458-0.652-1.458-1.458s0.653-1.458,1.458-1.458
+                                        s1.458,0.652,1.458,1.458S19.982,32.62,19.177,32.62z M19.177,27.621c-0.805,0-1.458-0.652-1.458-1.458
+                                        c0-0.805,0.653-1.458,1.458-1.458s1.458,0.653,1.458,1.458C20.635,26.969,19.982,27.621,19.177,27.621z M25.177,37.62
+                                        c-0.805,0-1.458-0.652-1.458-1.458s0.653-1.458,1.458-1.458c0.806,0,1.458,0.652,1.458,1.458S25.983,37.62,25.177,37.62z
+                                        M25.177,32.62c-0.805,0-1.458-0.652-1.458-1.458s0.653-1.458,1.458-1.458c0.806,0,1.458,0.652,1.458,1.458
+                                        S25.983,32.62,25.177,32.62z M25.177,27.621c-0.805,0-1.458-0.652-1.458-1.458c0-0.805,0.653-1.458,1.458-1.458
+                                        c0.806,0,1.458,0.653,1.458,1.458C26.635,26.969,25.983,27.621,25.177,27.621z M31.177,37.62c-0.806,0-1.458-0.652-1.458-1.458
+                                        s0.652-1.458,1.458-1.458s1.458,0.652,1.458,1.458S31.983,37.62,31.177,37.62z M31.177,32.62c-0.806,0-1.458-0.652-1.458-1.458
+                                        s0.652-1.458,1.458-1.458s1.458,0.652,1.458,1.458S31.983,32.62,31.177,32.62z M31.177,27.621c-0.806,0-1.458-0.652-1.458-1.458
+                                        c0-0.805,0.652-1.458,1.458-1.458s1.458,0.653,1.458,1.458C32.635,26.969,31.983,27.621,31.177,27.621z"/>
+                                </g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            </svg>
+                            +374 (10) 12-34-56
+                        </div>
+                        <div class="contact_info">
+                            <?xml version="1.0" encoding="iso-8859-1"?>
+                            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                viewBox="0 0 27.442 27.442" style="enable-background:new 0 0 27.442 27.442;" xml:space="preserve">
+                            <g>
+                                <path d="M19.494,0H7.948C6.843,0,5.951,0.896,5.951,1.999v23.446c0,1.102,0.892,1.997,1.997,1.997h11.546
+                                    c1.103,0,1.997-0.895,1.997-1.997V1.999C21.491,0.896,20.597,0,19.494,0z M10.872,1.214h5.7c0.144,0,0.261,0.215,0.261,0.481
+                                    s-0.117,0.482-0.261,0.482h-5.7c-0.145,0-0.26-0.216-0.26-0.482C10.612,1.429,10.727,1.214,10.872,1.214z M13.722,25.469
+                                    c-0.703,0-1.275-0.572-1.275-1.276s0.572-1.274,1.275-1.274c0.701,0,1.273,0.57,1.273,1.274S14.423,25.469,13.722,25.469z
+                                    M19.995,21.1H7.448V3.373h12.547V21.1z"/>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            </svg>
+                            +374 (77) 12-34-56
+                        </div>
+                        <div class="contact_info">
+                            <?xml version="1.0" encoding="iso-8859-1"?>
+                            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                            <g>
+                                <g>
+                                    <polygon points="339.392,258.624 512,367.744 512,144.896 		"/>
+                                </g>
+                            </g>
+                            <g>
+                                <g>
+                                    <polygon points="0,144.896 0,367.744 172.608,258.624 		"/>
+                                </g>
+                            </g>
+                            <g>
+                                <g>
+                                    <path d="M480,80H32C16.032,80,3.36,91.904,0.96,107.232L256,275.264l255.04-168.032C508.64,91.904,495.968,80,480,80z"/>
+                                </g>
+                            </g>
+                            <g>
+                                <g>
+                                    <path d="M310.08,277.952l-45.28,29.824c-2.688,1.76-5.728,2.624-8.8,2.624c-3.072,0-6.112-0.864-8.8-2.624l-45.28-29.856
+                                        L1.024,404.992C3.488,420.192,16.096,432,32,432h448c15.904,0,28.512-11.808,30.976-27.008L310.08,277.952z"/>
+                                </g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            </svg>
+                            indo@BookingByUs.am
+                        </div>
+                    </div>
+                    <div class="contact_item-map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d719.2492954204595!2d44.50642688356267!3d40.18520453214625!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x406abd02d9d37cab%3A0xdc357715d71f391a!2zMjAgTWFydGlyb3MgU2FyeWFuIFN0LCBZZXJldmFuIDAwMDIsINCQ0YDQvNC10L3QuNGP!5e0!3m2!1sru!2s!4v1612346179789!5m2!1sru!2s" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                    </div>
+                </div>
+            </section>
+            <!-- contact block end -->
+        </section>
+    </main>
+    <!-- main block end -->
+    <!-- footer block start -->
+    <footer>
+        <section class="footer container">
+            <div class="footer_top_item">
+                <img src="img/logo.png" alt="logo">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, magni.</p>
+            </div>
+            <div class="footer_top_item">
+                <p class="footer_top_item_title">Իմ Էջը</p>
+                <a href="#">Մուտք</a>
+                <a href="#">Գրանցում</a>
+                <br>
+                <a href="#">Օգնություն</a>
+            </div>
+            <div class="footer_top_item">
+                <p class="footer_top_item_title">Օգտակար Հղումներ</p>
+                <ul id="nav_menu">
+                    <li><a href="services.html">Ծառայություններ</a></li>
+                    <li><a href="about.html">Մեր Մասին</a></li>
+                    <li><a href="contact.html">Կապ</a></li>
+                </ul>
+            </div>
+            <div class="footer_top_item">
+                <p class="footer_top_item_title">Միացեք մեզ</p>
+                <ul>
+                    <li><a href="#">Մենք Facebook-ում</a></li>
+                    <li><a href="#">Մենք Instagram-ում</a></li>
+                    <li><a href="#">Մենք Twitter-ում</a></li>
+                    <li><a href="#">Մենք YouTube-ում</a></li>
+                </ul>
+            </div>
+        </section>
+        <div class="footer_bottom">
+            <div class="container">
+                <div class="web_info">
+                    Բոլոր Իրավունքները Պաշտպանված Են  &copy; 2021
+                </div>
+                <div class="created">
+                    Կայքը պատրաստել է <a href="https://www.facebook.com/HayrapetyanStyle" target="_blank">HayrapetyanStyle</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer block end -->
+    <!-- modal popup start -->
+
+    <div class="modal" data-offer-modal>
+        <form action="#" name="offers">
+            <span data-offer-close>
+                <?xml version="1.0" encoding="iso-8859-1"?>
+                <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                    width="357px" height="357px" viewBox="0 0 357 357" style="enable-background:new 0 0 357 357;" xml:space="preserve">
+                    <g>
+                        <g id="close">
+                            <polygon points="357,35.7 321.3,0 178.5,142.8 35.7,0 0,35.7 142.8,178.5 0,321.3 35.7,357 178.5,214.2 321.3,357 357,321.3 
+                                214.2,178.5 		"/>
+                        </g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                </svg>
+            </span>
+            <h3 class="sub_title">Վճարել</h3>
+            <input type="text" placeholder="Անուն Ազգանուն">
+            <p data-offerPrice></p>
+            <input type="text" placeholder="Քարտի թվեր օր․՝ 1234 5678 9112 5545">
+            <input type="submit" data-modal-submit>
+        </form>
+    </div>
+
+    <div class="modal" data-memberCount-modal>
+        <div class="member_count_options">
+            <span data-count-close>
+                <?xml version="1.0" encoding="iso-8859-1"?>
+                <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                    width="357px" height="357px" viewBox="0 0 357 357" style="enable-background:new 0 0 357 357;" xml:space="preserve">
+                    <g>
+                        <g id="close">
+                            <polygon points="357,35.7 321.3,0 178.5,142.8 35.7,0 0,35.7 142.8,178.5 0,321.3 35.7,357 178.5,214.2 321.3,357 357,321.3 
+                                214.2,178.5 		"/>
+                        </g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                </svg>
+            </span>
+            <h3 class="sub_title">Խնդրում ենք ընտրել</h3>
+            <form data-count-form>
+                <!-- fot adulst 18+ -->
+                <div class="aduls mco_item">
+                    Մեծահասակներ։ 
+                    <div class="mco_counter">
+                        <button data-minus>-</button>
+                        <span data-resault>0</span>
+                        <button data-plus>+</button>
+                    </div>
+                </div>
+                <!-- fot child 18- -->
+                <div class="child mco_item">
+                    Երեխաներ։ 
+                    <div class="mco_counter">
+                        <button data-minus>-</button>
+                        <span data-resault>0</span>
+                        <button data-plus>+</button>
+                    </div>
+                </div>
+                <!-- fot rooms-->
+                <div class="room_count mco_item">
+                    Սենյակների քանակ 
+                    <div class="mco_counter">
+                        <button data-minus>-</button>
+                        <span data-resault>0</span>
+                        <button data-plus>+</button>
+                    </div>
+                </div>
+                <button data-count-sumbit>Հաստատել</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- modal popup end -->
+
+    <script src="./js/jquery-3.2.0.min.js"></script>
+    <script src="./js/script.js"></script>
+
+</body>
+</html>
