@@ -181,4 +181,15 @@ window.addEventListener('load', () => {
     } catch {
         console.log('error in tabs');
     }
+
+    try {
+        const userSettingsBtn = document.querySelector('#user_settings_btn');
+        const userSettingsContent = document.querySelector('.user_settings_content');
+
+        userSettingsBtn.addEventListener('click', () => {
+            userSettingsContent.classList.toggle('active_usc');
+        })
+    } catch {
+        console.log('error in user settings');
+    }
 });
