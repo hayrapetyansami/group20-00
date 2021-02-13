@@ -223,6 +223,55 @@ p {
           transform: scale(0.9);
 }
 
+.loader_wrap {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 99999;
+  background: rgba(0, 0, 0, 0.9);
+}
+
+.loader_wrap .loader {
+  border: 13px solid #f3f3f3;
+  border-top: 13px solid #303F9F;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  -webkit-animation: spin 2s linear infinite;
+          animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
 body {
   color: #333;
   font-family: noto-sans-regular, 'Roboto', sans-serif;
@@ -1356,6 +1405,128 @@ main .profile_main .owl-carousel .user-profile-slide .service_items_text p {
 main .profile_main .owl-carousel .user-profile-slide .service_items_text a {
   color: #448AFF;
   font-size: 12px;
+}
+
+main .profile_main .settings_block form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+}
+
+main .profile_main .settings_block form label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 10px;
+  max-width: 700px;
+}
+
+main .profile_main .settings_block form label span {
+  cursor: pointer;
+  -ms-flex-preferred-size: 30%;
+      flex-basis: 30%;
+  font-weight: bold;
+}
+
+main .profile_main .settings_block form label button {
+  background: #3F51B5;
+  -ms-flex-preferred-size: 68%;
+      flex-basis: 68%;
+  display: unset;
+  margin-top: unset;
+}
+
+main .profile_main .settings_block form label #hide {
+  display: none;
+}
+
+main .profile_main .settings_block form label input {
+  border: 1px solid #ccc;
+  font-size: 13px;
+  -ms-flex-preferred-size: 68%;
+      flex-basis: 68%;
+  padding: 10px;
+}
+
+main .profile_main .settings_block form button {
+  display: block;
+  margin-top: 15px;
+  padding: 10px;
+  border: none;
+  background: #42b983;
+  cursor: pointer;
+  max-width: 700px;
+  color: #fff;
+}
+
+@media screen and (max-width: 1024px) {
+  main .profile_main .settings_block form label, main .profile_main .settings_block form button {
+    max-width: unset;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  main .profile_main .settings_block form label input, main .profile_main .settings_block form label button {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+  }
+  main .profile_main .settings_block form label span {
+    -ms-flex-preferred-size: unset;
+        flex-basis: unset;
+    margin-right: 15px;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  main .profile_main .settings_block form label {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+  }
+  main .profile_main .settings_block form label input, main .profile_main .settings_block form label button {
+    width: 100%;
+  }
+  main .profile_main .settings_block form label span {
+    margin-right: unset;
+    margin-bottom: 10px;
+  }
+}
+
+main .profile_main #accordion {
+  overflow: hidden;
+}
+
+main .profile_main #accordion h4 {
+  cursor: pointer;
+}
+
+main .profile_main #accordion .accordion {
+  height: 0px;
+  overflow: hidden;
+  -webkit-transform: translateY(-2000px);
+          transform: translateY(-2000px);
+  -webkit-transition: all .5s;
+  transition: all .5s;
+  margin-top: 10px;
+}
+
+main .profile_main #accordion .accordion.active_accordion {
+  min-height: 150px;
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+  -webkit-transition: all .5s;
+  transition: all .5s;
 }
 
 footer {

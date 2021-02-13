@@ -11,6 +11,12 @@ window.addEventListener('load', () => {
     });
 
     try {
+        document.querySelector('.loader_wrap').remove();
+    } catch {
+        console.log('error loader')
+    }
+
+    try {
         const modalPreview = (btn, modal, close) => {
             btn = document.querySelector(btn);
             close = document.querySelector(close);
@@ -191,5 +197,24 @@ window.addEventListener('load', () => {
         })
     } catch {
         console.log('error in user settings');
+    }
+
+    try {
+        const accordion = (btn, content, activeClass) => {
+            btn = document.querySelector(btn);
+            content = document.querySelector(content);
+
+            btn.addEventListener('click', () => {
+                content.classList.toggle(activeClass);
+            });
+        };
+
+        accordion('[data-accBtn1]', '[data-accCon1]', 'active_accordion');
+        accordion('[data-accBtn2]', '[data-accCon2]', 'active_accordion');
+        accordion('[data-accBtn3]', '[data-accCon3]', 'active_accordion');
+        accordion('[data-accBtn4]', '[data-accCon4]', 'active_accordion');
+
+    } catch {
+        console.log('error in accordion')
     }
 });

@@ -15,6 +15,7 @@ $divider : #BDBDBD;
 $white : #fff;
 $black : #333;
 $d5 : #5d5d5d;
+$btnGreen : #42b983;
 
 .lg-backdrop{
     z-index: 99999 !important;
@@ -199,6 +200,31 @@ p {
                 }
             }
         }
+    }
+}
+
+.loader_wrap{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99999;
+    background: rgba(0, 0, 0, 0.9);
+
+    .loader {
+        border: 13px solid #f3f3f3;
+        border-top: 13px solid $darkBG;
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;
+        animation: spin 2s linear infinite;
+    }
+      
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
     }
 }
 
@@ -1069,7 +1095,7 @@ main {
                     }
 
                     &[type=submit] {
-                        background: #42b983;
+                        background: $btnGreen;
                         border: none;
                         cursor: pointer;
                         color: $white;
@@ -1083,7 +1109,7 @@ main {
             }
 
             button {
-                background: #42b983;
+                background: $btnGreen;
                 border: none;
                 cursor: pointer;
                 color: $white;
@@ -1176,6 +1202,114 @@ main {
                         color: $lightBlue;
                         font-size: 12px;
                     }
+                }
+            }
+        }
+
+        .settings_block {
+            form {
+                display: flex;
+                flex-flow: column;
+
+                label {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    margin-top: 10px;
+                    max-width: 700px;
+
+                    span {
+                        cursor: pointer;
+                        flex-basis: 30%;
+                        font-weight: bold;
+                    }
+
+                    button {
+                        background: $lightBG;
+                        flex-basis: 68%;
+
+                        display: unset;
+                        margin-top: unset;
+                    }
+
+                    #hide {
+                        display: none;
+                    }
+
+                    input {
+                        border: 1px solid #ccc;
+                        font-size: 13px;
+                        flex-basis: 68%;
+                        padding: 10px;
+                    }
+                }
+
+                button {
+                    display: block;
+                    margin-top: 15px;
+                    padding: 10px;
+                    border: none;
+                    background: $btnGreen;
+                    cursor: pointer;
+                    max-width: 700px;
+                    color: $white;
+                }
+
+                @media screen and (max-width: 1024px) {
+                    label, button {
+                        max-width: unset;
+                    }
+                }
+
+                @media screen and (max-width: 768px) {
+                    label {
+                        input, button {
+                            flex-basis: 50%;
+                        }
+
+                        span {
+                            flex-basis: unset;
+                            margin-right: 15px;
+                        }
+                    }
+                }
+
+                @media screen and (max-width: 520px) {
+                    label {
+                        flex-flow: column;
+
+                        input, button {
+                            width: 100%;
+                        }
+
+                        span {
+                            margin-right: unset;
+                            margin-bottom: 10px;
+                        }
+                    }
+                }
+
+            }
+        }
+
+        #accordion {
+            overflow: hidden;
+
+            h4 {
+                cursor: pointer;
+            }
+
+            .accordion {
+                height: 0px;
+                overflow: hidden;
+                transform: translateY(-2000px);
+                transition: all .5s;
+                margin-top: 10px;
+
+                &.active_accordion {
+                    min-height: 150px;
+                    transform: translateY(0px);
+                    transition: all .5s;
                 }
             }
         }
@@ -1518,8 +1652,8 @@ footer {
                 width: 100%;
             }
             input[type=submit] {
-                background: #42b983;
-                border-color: #42b983;
+                background: $btnGreen;
+                border-color: $btnGreen;
                 cursor: pointer;
                 color: $white;
                 margin-top: 15px;
