@@ -12,21 +12,18 @@ window.addEventListener('load', () => {
 
     try {
         document.querySelector('.loader_wrap').remove();
-    } catch {
-        console.log('error loader')
-    }
+    } catch {console.log('error loader');}
 
     try {
         const modalPreview = (btn, modal, close) => {
             btn = document.querySelector(btn);
             close = document.querySelector(close);
             modal = document.querySelector(modal);
-
+    
             btn.addEventListener('click', (e) => {
                 e.preventDefault();
                 modal.style.display = 'flex';
             });
-
             close.addEventListener('click', () => {
                 modal.style.display = 'none';
             });
@@ -35,16 +32,16 @@ window.addEventListener('load', () => {
         modalPreview('#logBtn', '[data-loginOrReg-modal]', '[data-close-logmodal]');
         modalPreview('.member_count', '[data-memberCount-modal]', '[data-count-close]');
     } catch {
-        console.log('error preview modal');
+        console.log('error modal preview');
     }
 
     try {
         const offerModalContent = (price, submit, title, money, offerItemh3) => {
             title.innerHTML = `Վճարել։ ${offerItemh3.innerHTML}ի համար`;
             price.innerHTML = `Վճարման ենթակա գումարը։ <span> ${money}</span>`;
-            submit.setAttribute('value', `Վճարել ${money}`);
+            submit.setAttribute('value', `Վճարել ${money}`)
         };
-
+    
         const offerModalPreview = (button, modal, close, price, submit, title, offerItem) => {
             button = document.querySelectorAll(button);
             modal = document.querySelector(modal);
@@ -53,11 +50,11 @@ window.addEventListener('load', () => {
             submit = document.querySelector(submit);
             title = document.querySelector(title);
             offerItem = document.querySelectorAll(offerItem);
-
+    
             button.forEach((btn, i) => {
                 btn.addEventListener('click', () => {
                     modal.style.display = 'flex';
-
+        
                     if (i == 0) {
                         offerModalContent(price, submit, title, silver, offerItem[0]);
                     }
@@ -69,45 +66,45 @@ window.addEventListener('load', () => {
                     }
                 });
             });
-
+    
             close.addEventListener('click', () => {
                 modal.style.display = 'none';
             });
         }
-
+    
         offerModalPreview('[data-modal-btn]', '[data-offer-modal]', '[data-offer-close]', '[data-offerPrice]', '[data-modal-submit]', '[data-offer-modal] h3', '.offer_item h3');
-
     } catch {
         console.log('error offer modal');
     }
 
     try {
+        const res = document.querySelectorAll('[data-resault]');
         const minusBtn = document.querySelectorAll('[data-minus]');
         const plusBtn = document.querySelectorAll('[data-plus]');
-        const counterResault = document.querySelectorAll('[data-resault]');
-
-        const counterFilter = (minus, plus, resault) => {
+    
+        const counterFilter = (plus, minus, res) => {
             let i = 0;
     
-            minus.addEventListener('click', (e) => {
-                e.preventDefault()
-                if (resault.innerHTML >= 1) {
-                    resault.innerHTML = --i;
+            plus.addEventListener('click', (e) => {
+                e.preventDefault();
+    
+                if (res.innerHTML <= 8) {
+                    res.innerHTML = ++i;
                 }
             });
     
-            plus.addEventListener('click', (e) => {
-                e.preventDefault()
-                if (resault.innerHTML <= 8) {
-                    resault.innerHTML = ++i;
+            minus.addEventListener('click', (e) => {
+                e.preventDefault();
+    
+                if (res.innerHTML >= 1) {
+                    res.innerHTML = --i;
                 }
             });
         };
-
-        counterFilter(minusBtn[0], plusBtn[0], counterResault[0]);
-        counterFilter(minusBtn[1], plusBtn[1], counterResault[1]);
-        counterFilter(minusBtn[2], plusBtn[2], counterResault[2]);
-
+    
+        counterFilter(plusBtn[0], minusBtn[0], res[0]);
+        counterFilter(plusBtn[1], minusBtn[1], res[1]);
+        counterFilter(plusBtn[2], minusBtn[2], res[2]);
     } catch {
         console.log('error counter');
     }
@@ -140,24 +137,24 @@ window.addEventListener('load', () => {
                     slidesPerView: 3,
                 },
                 1140: {
-                    slidesPerView: 4,
+                  slidesPerView: 4,
                 }
-            }
+              }
         });
     
         const swiperSlide = document.querySelectorAll('.swiper-slide');
     
         swiperSlide.forEach(slide => {
             slide.addEventListener('mouseover', () => {
-                swiper.autoplay.stop();
+                swiper.autoplay.stop()
             });
-            
+    
             slide.addEventListener('mouseleave', () => {
-                swiper.autoplay.start();
+                swiper.autoplay.start()
             });
-        });
+        })
     } catch {
-        console.error('error in swiper');
+        console.log('error swiper');
     }
 
     try {
@@ -168,6 +165,7 @@ window.addEventListener('load', () => {
         const regBtn = document.querySelector('.open_reg');
 
         const tabConfig = (activeBtn, deactiveBtn, currentClass, showTab, hideTab) => {
+            
             activeBtn.addEventListener('click', () => {
                 deactiveBtn.classList.remove(currentClass);
                 activeBtn.classList.add(currentClass);
@@ -177,26 +175,26 @@ window.addEventListener('load', () => {
         }
 
         logBtn.addEventListener('click', () => {
-            tabConfig(logBtn, regBtn, 'active_tab', logTab, regTab);
+            tabConfig(logBtn, regBtn, 'active_tab', logTab, regTab)
         });
 
         regBtn.addEventListener('click', () => {
-            tabConfig(regBtn, logBtn, 'active_tab', regTab, logTab);
+            tabConfig(regBtn, logBtn, 'active_tab', regTab, logTab)
         });
-
+        
     } catch {
-        console.log('error in tabs');
+        console.log('error in tabs')
     }
 
     try {
         const userSettingsBtn = document.querySelector('#user_settings_btn');
-        const userSettingsContent = document.querySelector('.user_settings_content');
+        const userSettingsContent = document.querySelector('.user_seetings_content');
 
         userSettingsBtn.addEventListener('click', () => {
             userSettingsContent.classList.toggle('active_usc');
-        })
+        });
     } catch {
-        console.log('error in user settings');
+        console.log('error in user settings')
     }
 
     try {

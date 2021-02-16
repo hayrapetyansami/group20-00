@@ -4,10 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+    <title> Կարգավորումներ - Booking By Us </title>
+    <link rel="stylesheet" href="./css/owl.carousel.min.css">
+    <link rel="stylesheet" href="./css/owl.theme.default.min.css">
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
+    <!-- lodader start -->
+    <div class="loader_wrap">
+        <div class="loader"></div>
+    </div>
+    <!-- lodader end -->
     <!-- navigation block start -->
     <nav>
         <section class="nav container">
@@ -79,18 +87,21 @@
                 <li><a href="services.html">Ծառայություններ</a></li>
                 <li><a href="about.html">Մեր Մասին</a></li>
                 <li><a href="contact.html">Կապ</a></li>
-                <form action="#" name="search" autocomplete="off" data-search>
-                    <input type="text" name="search_value" placeholder="Որոնում․․․">
+
+                <form action="#" name="search" data-search>
+                    <input type="search" name="search_value" placeholder="Որոնում․․․">
                 </form>
             </ul>
             <!-- our site menu end -->
 
-            <!-- user profile settings start -->
-
+            <!-- user profile settings start-->
             <div id="user_settings_btn">
-                <svg height="490pt" viewBox="-2 0 490 490.66667" width="490pt" xmlns="http://www.w3.org/2000/svg"><path d="m299 106.667969c0 58.910156-47.757812 106.664062-106.667969 106.664062-58.910156 0-106.664062-47.753906-106.664062-106.664062 0-58.910157 47.753906-106.667969 106.664062-106.667969 58.910157 0 106.667969 47.757812 106.667969 106.667969zm0 0"/><path d="m246.390625 443.734375c-11.113281-19.242187-8.894531-42.945313 4.332031-59.734375-13.226562-16.789062-15.445312-40.46875-4.332031-59.734375l17.261719-29.867187c9.492187-16.445313 27.199218-26.664063 46.207031-26.664063 2.601563 0 5.160156.191406 7.699219.554687.707031-1.75 1.601562-3.394531 2.476562-5.058593-11.519531-4.542969-23.957031-7.230469-37.035156-7.230469h-181.332031c-55.875 0-101.335938 45.460938-101.335938 101.332031v74.667969c0 8.832031 7.167969 16 16 16h232.511719zm0 0"/><path d="m463.332031 394.003906c.425781-3.304687 1-6.589844 1-10.003906 0-3.433594-.597656-6.699219-1-10.003906l19.21875-14.550782c4.289063-3.242187 5.484375-9.171874 2.796875-13.84375l-17.257812-29.867187c-2.691406-4.652344-8.429688-6.59375-13.378906-4.503906l-22.121094 9.324219c-5.398438-4.117188-11.136719-7.742188-17.472656-10.390626l-2.945313-23.488281c-.679687-5.332031-5.203125-9.34375-10.578125-9.34375h-34.496094c-5.378906 0-9.921875 4.011719-10.582031 9.34375l-2.945313 23.488281c-6.335937 2.648438-12.09375 6.292969-17.472656 10.390626l-22.121094-9.324219c-4.949218-2.089844-10.6875-.167969-13.375 4.503906l-17.261718 29.867187c-2.6875 4.648438-1.492188 10.578126 2.796875 13.84375l19.21875 14.550782c-.425781 3.304687-1 6.589844-1 10.003906 0 3.433594.597656 6.699219 1 10.003906l-19.21875 14.550782c-4.289063 3.242187-5.484375 9.171874-2.796875 13.84375l17.261718 29.890624c2.6875 4.648438 8.425782 6.589844 13.375 4.5l22.121094-9.34375c5.398438 4.117188 11.136719 7.742188 17.472656 10.390626l2.945313 23.488281c.660156 5.332031 5.183594 9.34375 10.558594 9.34375h34.496093c5.375 0 9.921876-4.011719 10.582032-9.34375l2.945312-23.488281c6.335938-2.648438 12.09375-6.292969 17.46875-10.390626l22.125 9.324219c4.949219 2.089844 10.6875.167969 13.375-4.503906l17.257813-29.886719c2.6875-4.652344 1.496093-10.582031-2.792969-13.84375zm-79 32.664063c-23.570312 0-42.664062-19.09375-42.664062-42.667969s19.09375-42.667969 42.664062-42.667969c23.574219 0 42.667969 19.09375 42.667969 42.667969s-19.09375 42.667969-42.667969 42.667969zm0 0"/></svg>
+                <svg height="490pt" viewBox="-2 0 490 490.66667" width="490pt" xmlns="http://www.w3.org/2000/svg">
+                    <path d="m299 106.667969c0 58.910156-47.757812 106.664062-106.667969 106.664062-58.910156 0-106.664062-47.753906-106.664062-106.664062 0-58.910157 47.753906-106.667969 106.664062-106.667969 58.910157 0 106.667969 47.757812 106.667969 106.667969zm0 0"/><path d="m246.390625 443.734375c-11.113281-19.242187-8.894531-42.945313 4.332031-59.734375-13.226562-16.789062-15.445312-40.46875-4.332031-59.734375l17.261719-29.867187c9.492187-16.445313 27.199218-26.664063 46.207031-26.664063 2.601563 0 5.160156.191406 7.699219.554687.707031-1.75 1.601562-3.394531 2.476562-5.058593-11.519531-4.542969-23.957031-7.230469-37.035156-7.230469h-181.332031c-55.875 0-101.335938 45.460938-101.335938 101.332031v74.667969c0 8.832031 7.167969 16 16 16h232.511719zm0 0"/><path d="m463.332031 394.003906c.425781-3.304687 1-6.589844 1-10.003906 0-3.433594-.597656-6.699219-1-10.003906l19.21875-14.550782c4.289063-3.242187 5.484375-9.171874 2.796875-13.84375l-17.257812-29.867187c-2.691406-4.652344-8.429688-6.59375-13.378906-4.503906l-22.121094 9.324219c-5.398438-4.117188-11.136719-7.742188-17.472656-10.390626l-2.945313-23.488281c-.679687-5.332031-5.203125-9.34375-10.578125-9.34375h-34.496094c-5.378906 0-9.921875 4.011719-10.582031 9.34375l-2.945313 23.488281c-6.335937 2.648438-12.09375 6.292969-17.472656 10.390626l-22.121094-9.324219c-4.949218-2.089844-10.6875-.167969-13.375 4.503906l-17.261718 29.867187c-2.6875 4.648438-1.492188 10.578126 2.796875 13.84375l19.21875 14.550782c-.425781 3.304687-1 6.589844-1 10.003906 0 3.433594.597656 6.699219 1 10.003906l-19.21875 14.550782c-4.289063 3.242187-5.484375 9.171874-2.796875 13.84375l17.261718 29.890624c2.6875 4.648438 8.425782 6.589844 13.375 4.5l22.121094-9.34375c5.398438 4.117188 11.136719 7.742188 17.472656 10.390626l2.945313 23.488281c.660156 5.332031 5.183594 9.34375 10.558594 9.34375h34.496093c5.375 0 9.921876-4.011719 10.582032-9.34375l2.945312-23.488281c6.335938-2.648438 12.09375-6.292969 17.46875-10.390626l22.125 9.324219c4.949219 2.089844 10.6875.167969 13.375-4.503906l17.257813-29.886719c2.6875-4.652344 1.496093-10.582031-2.792969-13.84375zm-79 32.664063c-23.570312 0-42.664062-19.09375-42.664062-42.667969s19.09375-42.667969 42.664062-42.667969c23.574219 0 42.667969 19.09375 42.667969 42.667969s-19.09375 42.667969-42.667969 42.667969zm0 0"/>
+                </svg>
             </div>
-            <div class="user_settings_content">
+
+            <div class="user_seetings_content">
                 <p id="user_name">
                     <?xml version="1.0" encoding="iso-8859-1"?>
                     <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
@@ -137,24 +148,24 @@
                     </svg>
                     Սոֆիա Սիմոնյան
                 </p>
-                <li><a href="#">Գլխավոր</a></li>
-                <li><a href="#">Կարգավորումներ</a></li>
-                <li><a href="#">Հաճախ տրվող հարցեր</a></li>
-                <li><a href="#">Օգնություն</a></li>
-                <li><a href="#">Ելք</a></li>
+                <li><a href="userProfile.html">Պրոֆիլ</a></li>
+                <li><a href="settings.html">Կարգավորումներ</a></li>
+                <li><a href="ask.html">Հաճախ տրվող հարցեր</a></li>
+                <li><a href="help.html">Օգնություն</a></li>
+                <li><a href="index.html">Ելք</a></li>
             </div>
-            <!-- user profile settings end -->
+            <!-- user profile settings end-->
         </section>
     </nav>
     <!-- navigation block end -->
-
-    <!-- user profile header start -->
+    
+    <!-- user profile header block start -->
     <header class="profile_global_header">
         <section class="profile_header container">
             <div class="profile_header_left">
                 <img src="https://i.ytimg.com/vi/vdB-8eLEW8g/hqdefault.jpg" alt="user_prof_pic">
                 <h3>Սոֆիա Սիմոնյան</h3>
-                <p>Գրանցվել է։ 10․02․2021 թ․</p>
+                <p>Գրանցվել է։ 10․02․2021</p>
             </div>
             <div class="profile_header_right">
                 <h3 class="sub_title">Ձեր պատվերների պատմությունը</h3>
@@ -197,27 +208,29 @@
                         <li>Օգտվելու ամսաթիվը։ 10․02․2021 թ․</li>
                     </div>
                 </div>
+                
                 <a href="#">Տեսնել ավելին</a>
             </div>
         </section>
     </header>
-    <!-- user profile header end -->
-
+    <!-- user profile header block end -->
+    
+    <!-- user profile main block start -->
     <main>
         <section class="profile_main container">
             <h3 class="title">Կարգավորումներ</h3>
 
             <div class="settings_block">
-                <p class="settings_block_title">Այստեղ դուք կարող եք փոփոխել ձեր անձնական տվյալները</p>
+                <p class="settings_block_title"></p>
 
                 <form action="#" autocomplete="off" name="personal">
                     <label>
-                        <span>Սոֆիան Սիմոնյան</span>
-                        <input type="text" name="new-name" placeholder="Փոխել Անուն Ազգանունը">
+                        <span>Սոֆիա Սիմոնյան</span>
+                        <input type="text" name="new-name" placeholder="Փոխել Անուն ազգանունը">
                     </label>
                     <label>
                         <span>Հեռախոսահամար</span>
-                        <input type="tel" name="new-tel" placeholder="Փոխել Հեռախոսահամարը">
+                        <input type="tel" name="new-tel" placeholder="Փոխել հեռախոսահամարը">
                     </label>
                     <label>
                         <span>sofia@gmail.com</span>
@@ -231,32 +244,32 @@
                         <span>Փոփոխել գլխավոր նկարը</span>
                         <button>Վերբեռնել նկար</button>
                         <input type="file" id="hide">
-                    </label> 
+                    </label>
 
-                    <button>Պահպանել</button>
-
+                    <button> Պահպանել </button>
                 </form>
             </div>
         </section>
     </main>
 
+    <!-- user profile main block end -->
     <!-- footer block start -->
     <footer>
         <section class="footer container">
             <div class="footer_top_item">
                 <img src="img/logo.png" alt="logo">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, magni.</p>
+                <p>Booking By Us, Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae eius ut et aut minima voluptate...</p>
             </div>
             <div class="footer_top_item">
                 <p class="footer_top_item_title">Իմ Էջը</p>
-                <a href="#">Մուտք</a>
-                <a href="#">Գրանցում</a>
+                <a href="userProfile.html">Հախախորդի տարածք</a>
+                <a href="ask.html">Հաճախ Տրվող Հարցեր</a>
                 <br>
-                <a href="#">Օգնություն</a>
+                <a href="help.html">Օգնություն</a>
             </div>
             <div class="footer_top_item">
                 <p class="footer_top_item_title">Օգտակար Հղումներ</p>
-                <ul id="nav_menu">
+                <ul>
                     <li><a href="services.html">Ծառայություններ</a></li>
                     <li><a href="about.html">Մեր Մասին</a></li>
                     <li><a href="contact.html">Կապ</a></li>
@@ -265,27 +278,29 @@
             <div class="footer_top_item">
                 <p class="footer_top_item_title">Միացեք մեզ</p>
                 <ul>
-                    <li><a href="#">Մենք Facebook-ում</a></li>
-                    <li><a href="#">Մենք Instagram-ում</a></li>
-                    <li><a href="#">Մենք Twitter-ում</a></li>
-                    <li><a href="#">Մենք YouTube-ում</a></li>
+                    <li>
+                        <a href="#">Մենք Facebook-ում</a>
+                        <a href="#">Մենք Instagram-ում</a>
+                        <a href="#">Մենք Twitter-ում</a>
+                        <a href="#">Մենք YouTube-ում</a>
+                    </li>
                 </ul>
             </div>
         </section>
         <div class="footer_bottom">
             <div class="container">
                 <div class="web_info">
-                    Բոլոր Իրավունքները Պաշտպանված Են  &copy; 2021
+                    Բոլոր Իրավունքները Պաշտպանված են &copy; 2021
                 </div>
                 <div class="created">
-                    Կայքը պատրաստել է <a href="https://www.facebook.com/HayrapetyanStyle" target="_blank">HayrapetyanStyle</a>
+                    Կայքը պատրաստել է <a href="https://www.facebook.com/HayrapetyanStyle/" target="_blank">HayrapetyanStyle</a>
                 </div>
             </div>
         </div>
     </footer>
     <!-- footer block end -->
-
     <script src="./js/jquery-3.2.0.min.js"></script>
     <script src="./js/script.js"></script>
+
 </body>
 </html>
